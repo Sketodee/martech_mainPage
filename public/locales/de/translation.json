@@ -1,0 +1,386 @@
+{
+  "hero": {
+    "navigation": {
+      "about": "Über uns",
+      "program": "Programm",
+      "testimonial": "Testimonials",
+      "navCta": "Am Programm teilnehmen"
+    }
+  },
+  "footer": {
+    "company": {
+      "name": "OAD Solutions",
+      "description": "Der erste kostenlose End-to-End-Analytics-Service für die Website, entwickelt für Unternehmen verschiedener Ebenen und Geschäftssegmente.",
+      "moreAboutUs": "Mehr über uns"
+    },
+    "navigation": {
+      "about": "Über uns",
+      "program": "Programm",
+      "testimonial": "Testimonials"
+    },
+    "contact": {
+      "heading": "Kontakt",
+      "phone": "+1 (999) 888-77-66",
+      "email": "hello@oadsolutions.com"
+    },
+    "location": {
+      "heading": "Standort",
+      "address1": "483920, Moskau,",
+      "address2": "Myasnitskaya 22/2/5, Büro 4"
+    },
+    "languages": {
+      "heading": "Sprachen",
+      "options": {
+        "english": "Englisch",
+        "spanish": "Spanisch",
+        "french": "Französisch",
+        "german": "Deutsch",
+        "russian": "Russisch"
+      }
+    },
+    "social": {
+      "linkedin": "LinkedIn",
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "instagram": "Instagram"
+    },
+    "copyright": {
+      "text": "© 2025 — Copyright",
+      "allRights": "Alle Rechte vorbehalten"
+    }
+  },
+  "contactForm": {
+    "heading": {
+      "contact": "Kontakt",
+      "us": "aufnehmen"
+    },
+    "subheading": "Lassen Sie uns den Aufwand bei der Kampagnenumsetzung übernehmen",
+    "description": "Möchten Sie sehen, wie OAD in Ihr Team passt oder Ihre nächste Kampagne durchführt? Schreiben Sie uns eine Nachricht — wir melden uns innerhalb von 24 Stunden zurück.",
+    "form": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Geben Sie Ihren Namen ein"
+      },
+      "email": {
+        "label": "E-Mail",
+        "placeholder": "Geben Sie Ihre E-Mail ein"
+      },
+      "message": {
+        "label": "Nachricht",
+        "placeholder": "Geben Sie Ihre Nachricht ein"
+      },
+      "required": "Pflichtfeld",
+      "maxCharacters": "Max. 500 Zeichen",
+      "button": "Nachricht senden"
+    }
+  },
+  "heroProgram": {
+    "headline": {
+      "lineOne": "Mehr verdienen. Weniger brennen. Ihre",
+      "lineTwo": "Marketing Tech Karriere beginnt hier."
+    },
+    "description": "Steigen Sie in Marketing Operations ein — einen der lohnendsten und übersehenen Karrierewege in der Tech-Branche. Meistern Sie in nur 12 Wochen echte Tools wie Marketo, HubSpot und Salesforce, erstellen Sie jobfertige Projekte und starten Sie eine hochbezahlte Karriere ohne Burnout.",
+    "cta": {
+      "button": "Treten Sie unserer nächsten Kohorte bei"
+    },
+    "profiles": {
+      "alt": "Karriere-Entwickler",
+      "joinText": "Treten Sie 100+ Karriere-Entwicklern bei"
+    },
+    "salaryPromise": {
+      "text": "Erhalten Sie einen 65.000€ Gehaltsjob in Marketing-Technologie"
+    },
+    "video": {
+      "watchText": "Schauen Sie sich das kurze Video unten an",
+      "title": "Marketing-Technologie Karriere Video",
+      "caption": "Erfahren Sie, wie Sie in die Marketing-Technologie einsteigen und 65.000€+ verdienen"
+    }
+  },
+  "alumniProgramSections": {
+    "alumni": {
+      "title": "Was unsere Alumni sagen",
+      "description": "Glauben Sie nicht nur uns — hören Sie direkt von Studenten, die das echte Tech Mastery Programm genutzt haben, um hochbezahlte Jobs zu landen, in die Tech-Branche zu wechseln und Karrieren aufzubauen, die sie nie für möglich gehalten hätten.",
+      "viewMoreButton": "Mehr Testimonials anzeigen",
+      "videos": {
+        "sarah": {
+          "title": "Sarahs Erfolgsgeschichte"
+        },
+        "mark": {
+          "title": "Marks Karrierewechsel"
+        },
+        "jessica": {
+          "title": "Jessicas MarTech-Reise"
+        }
+      }
+    },
+    "program": {
+      "title": "Für wen dieses Programm ist",
+      "description": "Ob Sie die Branche wechseln oder Ihre Fähigkeiten verbessern möchten, dieses Programm ist darauf ausgelegt, Sie dort abzuholen, wo Sie sind — und Sie auf Expertenniveau zu bringen.",
+      "targets": {
+        "careerChangers": {
+          "title": "Karrierewechsler",
+          "description": "Wechseln Sie selbstbewusst zu MarTech mit den Tools, Workflows und Strategien, die wirklich funktionieren."
+        },
+        "marketers": {
+          "title": "Marketer werden technisch",
+          "description": "Werden Sie der Automatisierungs- und Datenexperte, den Ihr Team braucht, mit realer Erfahrung."
+        },
+        "futurePros": {
+          "title": "Zukünftige Martech-Profis",
+          "description": "Starten Sie Ihre Karriere in der Tech-Branche ohne Programmierung — lernen Sie wertvolle operative Fähigkeiten, die wichtig sind."
+        }
+      }
+    }
+  },
+  "marTechMasteryWorks": {
+    "title": "Warum Martech Mastery funktioniert",
+    "subtitle": "Entwickelt, um Sie einzustellen — nicht nur zu zertifizieren.",
+    "features": {
+      "builtByExperts": {
+        "title": "Von Experten entwickelt",
+        "description": "Lernen Sie von Beratern mit jahrelanger Erfahrung in Unternehmen wie Google, AWS und Stripe."
+      },
+      "realToolExperience": {
+        "title": "Echte Tool-Erfahrung",
+        "description": "Sammeln Sie praktische Erfahrungen mit MarTech-Plattformen auf Unternehmensebene, indem Sie echte Kampagnen erstellen."
+      },
+      "jobFocusedTraining": {
+        "title": "Jobfokussierte Ausbildung",
+        "description": "Lebenslauf-Überarbeitung, Vorstellungsgespräch-Vorbereitung, LinkedIn-Audits. Wir bereiten Sie auf den Job vor, nicht nur auf die Theorie."
+      },
+      "repeatableSystems": {
+        "title": "Wiederholbare Systeme",
+        "description": "Lernen Sie Frameworks und Best Practices, die Sie für jedes Marketing Ops Team wertvoll machen."
+      }
+    }
+  },
+  "marketingOpsCurriculum": {
+    "title": "Alles, was Sie brauchen, um stark in Marketing Ops zu starten",
+    "description": "Ein 12-wöchiger Lehrplan, der darauf ausgelegt ist, die Workflows, Herausforderungen und ergebnisorientierten Ansätze einer echten Marketing Ops Rolle zu simulieren.",
+    "imageAlt": "Marketing-Profis arbeiten an verschiedenen Aspekten von Marketing Operations",
+    "weeks": {
+      "week1to3": {
+        "weeks": "Woche 1-3",
+        "title": "Marketing-Automatisierung Grundlagen",
+        "description": "Verstehen Sie Plattformen, Kanäle, Workflows, Trigger und Segmentierungslogik."
+      },
+      "week4to6": {
+        "weeks": "Woche 4-6",
+        "title": "Tools Vertiefung",
+        "description": "Meistern Sie Marketo, HubSpot und Salesforce mit geführten praktischen Aufgaben."
+      },
+      "week7to9": {
+        "weeks": "Woche 7-9",
+        "title": "Kampagnenumsetzung + Fehlerbehebung",
+        "description": "Planen, prüfen und starten Sie mehrstufige Kampagnen, während Sie reale Herausforderungen lösen."
+      },
+      "week10to12": {
+        "weeks": "Woche 10-12",
+        "title": "Karrierebereitschaft",
+        "description": "Mock-Interviews, Portfolio-Projekte und eine vollständige Jobstrategie, um Ihre erste Stelle zu sichern."
+      }
+    }
+  },
+  "realProjectsSection": {
+    "title": "Werden Sie jobfertig mit echten Projekten, die echte Arbeit widerspiegeln",
+    "description": "Sammeln Sie operative Erfahrungen, die sich direkt in gefragte Marketing Ops Fähigkeiten übersetzen lassen — von Automatisierung bis Datenmanagement.",
+    "projects": {
+      "marketingAutomation": {
+        "title": "Marketing-Automatisierung Setup",
+        "description": "Entwerfen Sie Nurture-Journeys, erstellen Sie E-Mail-Sequenzen und schaffen Sie automatisierte Workflows mit Marketo."
+      },
+      "crmIntegration": {
+        "title": "CRM-Integrationsprojekt",
+        "description": "Konfigurieren Sie Lead-Scoring, bereinigen und segmentieren Sie Daten und richten Sie Dashboards für umsetzbare Berichterstattung ein."
+      },
+      "campaignExecution": {
+        "title": "Kampagnenumsetzung Simulationen",
+        "description": "Erstellen und prüfen Sie Multi-Touch-Kampagnen, vom Asset-Management bis zur finalen Launch-Fehlerbehebung."
+      }
+    }
+  },
+  "programFAQSection": {
+    "header": {
+      "title": "FAQs"
+    },
+    "content": {
+      "title": "Haben Sie noch Fragen? Lassen Sie uns sie klären.",
+      "description": "Ob Sie sich über Jobaussichten, Gehalt oder Marktnachfrage wundern, oder ob Sie sogar der \"richtige Typ\" von Kandidat sind — das sind die Fragen, die wir am häufigsten von zukünftigen Studenten wie Ihnen hören.",
+      "viewAllButton": "Alle FAQs anzeigen"
+    },
+    "faqs": {
+      "salary": {
+        "question": "Welches Gehalt kann ich nach Abschluss des Programms erwarten?",
+        "answer": "Marketing Operations Profis verdienen typischerweise zwischen 45.000€-75.000€ in ihrer ersten Rolle, wobei Senior-Positionen 90.000€+ erreichen. Unsere Absolventen haben Stellen in Unternehmen wie Google, Salesforce und verschiedenen wachstumsstarken Startups gesichert."
+      },
+      "demand": {
+        "question": "Gibt es wirklich Nachfrage nach Marketing Operations Rollen?",
+        "answer": "Absolut. Marketing Operations ist eine der am schnellsten wachsenden Rollen in der Tech-Branche, mit einer Nachfrage, die jährlich um 35% steigt. Unternehmen brauchen dringend Profis, die Marketing-Strategie und Technologie-Umsetzung verbinden können."
+      },
+      "background": {
+        "question": "Ich habe keinen Tech- oder Marketing-Hintergrund — kann ich trotzdem teilnehmen?",
+        "answer": "Ja! Unser Programm ist für Karrierewechsler konzipiert. Wir beginnen mit den Grundlagen und bauen Ihre Fähigkeiten progressiv auf. Viele erfolgreiche Absolventen kamen aus völlig anderen Branchen wie Einzelhandel, Finanzen und Gesundheitswesen."
+      },
+      "tools": {
+        "question": "Welche Tools werde ich im Programm lernen?",
+        "answer": "Sie sammeln praktische Erfahrungen mit branchenüblichen Plattformen wie Marketo, HubSpot, Salesforce, Pardot und verschiedenen Analytics-Tools. Wir konzentrieren uns auf die Tools, die von Arbeitgebern am meisten nachgefragt werden."
+      },
+      "jobHelp": {
+        "question": "Helfen Sie mir, nach dem Programm einen Job zu finden?",
+        "answer": "Absolut. Unsere Karriereunterstützung umfasst Lebenslauf-Optimierung, LinkedIn-Profil-Verbesserung, Vorstellungsgespräch-Vorbereitung, Portfolio-Entwicklung und direkte Vorstellungen bei unserem Einstellungspartnernetzwerk."
+      },
+      "ai": {
+        "question": "Wie verändert KI Marketing Operations — und warum ist das für mich wichtig?",
+        "answer": "KI verbessert Marketing Operations, ersetzt sie aber nicht. Wir lehren Sie, wie Sie KI-Tools für Automatisierung, Personalisierung und Datenanalyse nutzen, was Sie wertvoller und zukunftssicher in Ihrer Karriere macht."
+      }
+    }
+  },
+  "aboutUsTrainingSection": {
+    "about": {
+      "title": "Über uns",
+      "description": "Wir haben MarTech Mastery geschaffen, um die Lücke zwischen Marketing-Theorie und realer Umsetzung zu schließen. Alles, was wir tun, ist darauf ausgelegt, Sie einzustellen — praktische Erfahrung mit gefragten MarTech-Tools.",
+      "imageAlt": "Geschäftsteam-Meeting und Präsentation"
+    },
+    "training": {
+      "title": "Die nächste Generation von  Marketing Ops Profis ausbilden",
+      "description": "Das MarTech Mastery Programm wurde von Marketing-Beratern erstellt, die mit globalen Marken wie Google, Stripe und Adobe gearbeitet haben. Wir sind hier, um sicherzustellen, dass Sie praktische, gefragte Fähigkeiten erwerben — schnell.",
+      "careerPromise": "Ihr schneller Weg zu einer 65.000€+ Karriere. Sehen Sie, wie MarTech Mastery es möglich macht!",
+      "videoInstruction": "Schauen Sie sich das kurze Video unten an",
+      "videoTitle": "MarTech Mastery Karriere-Programm Video",
+      "videoCaption": "Entdecken Sie, wie MarTech Mastery Ihre Karriere zu 65.000€+ beschleunigen kann"
+    }
+  },
+  "expertsMissionStorySection": {
+    "experts": {
+      "title": "Von Experten entwickelt. Für Ihren  Karrieresprung konzipiert.",
+      "description": "Wir sind nicht nur ein weiterer Online-Kurs — MarTech Mastery wurde von echten Marketing Operations Profis erstellt, die mit Unternehmen wie Google, Stripe und Canva gearbeitet haben. Unsere Mission: Menschen wie Ihnen zu helfen, selbstbewusst in hochbezahlte MarTech-Rollen zu wechseln mit praktischer Erfahrung, Experten-Mentoring und Karriereunterstützung.",
+      "buttonText": "Am Programm teilnehmen"
+    },
+    "mission": {
+      "title": "Unsere Mission",
+      "paragraph1": "Marketing entwickelt sich schnell — von E-Mail und CRM zu Full-Funnel-Automatisierung, KI-Personalisierung und RevOps. Aber es gibt eine Lücke: Unternehmen brauchen Profis, die Marketing-Kreativität mit Tech-Know-how verbinden können. Hier kommen Sie ins Spiel.",
+      "paragraph2": "Wir haben MarTech Mastery gestartet, um die nächste Welle von Marketing Ops Profis auszubilden — Menschen, die bereit sind, mit Tools wie HubSpot, Marketo und Salesforce zu arbeiten und vom ersten Tag an echten Wert beizutragen."
+    },
+    "story": {
+      "title": "Unsere Geschichte",
+      "paragraph1": "MarTech Mastery wurde in den Beratungsgräben geboren. Unsere Gründer haben über ein Jahrzehnt damit verbracht, Automatisierungssysteme für Milliarden-Dollar-Startups, Fortune 500-Marken und Scale-ups in Europa, den USA und Afrika zu entwickeln.",
+      "paragraph2": "In jeder Rolle stach eine Sache hervor: die Talentlücke. Es gab nicht genug praktische, technisch versierte Marketer, die implementieren konnten, nicht nur Ideen entwickeln. Also haben wir ein Programm entwickelt, das genau das lehrt, was wir uns gewünscht hätten, als wir anfingen."
+    }
+  },
+  "meetTheTeamSection": {
+    "whyWorks": {
+      "title": "Warum MarTech Mastery funktioniert",
+      "subtitle": "Entwickelt, um Sie einzustellen — nicht nur zu zertifizieren."
+    },
+    "features": {
+      "builtByExperts": {
+        "title": "Von Experten entwickelt",
+        "description": "Lernen Sie von Beratern mit jahrelanger Erfahrung in Unternehmen wie Google, AWS und Stripe."
+      },
+      "realToolExperience": {
+        "title": "Echte Tool-Erfahrung",
+        "description": "Sammeln Sie praktische Erfahrungen mit MarTech-Plattformen auf Unternehmensebene, indem Sie echte Kampagnen erstellen."
+      },
+      "jobFocusedTraining": {
+        "title": "Jobfokussierte Ausbildung",
+        "description": "Lebenslauf-Überprüfungen, Vorstellungsgespräch-Vorbereitung, LinkedIn-Audits. Wir bereiten Sie auf den Job vor, nicht nur auf die Theorie."
+      },
+      "repeatableSystems": {
+        "title": "Wiederholbare Systeme",
+        "description": "Lernen Sie Frameworks und Best Practices, die Sie für jedes Marketing Ops Team wertvoll machen."
+      }
+    },
+    "team": {
+      "title": "Lernen Sie das Team kennen",
+      "description": "Unser Team kombiniert tiefe technische Erfahrung mit praktischer Marketing Operations Expertise. Wir waren in den Gräben — haben Kampagnen erstellt, Funnels optimiert und messbares Wachstum vorangetrieben. Jetzt lehren wir Sie, dasselbe zu tun."
+    },
+    "teamMembers": {
+      "sarahChen": {
+        "name": "Sarah Chen",
+        "role": "Marketing-Automatisierung Expertin"
+      },
+      "mikeTorres": {
+        "name": "Mike Torres",
+        "role": "CRM-Navigation Experte"
+      },
+      "malikBanjo": {
+        "name": "Malik Banjo",
+        "role": "Programmdirektor & Marketing-Leiter"
+      },
+      "jennaKim": {
+        "name": "Jenna Kim",
+        "role": "Studentenerfolg & Job-Support Coach"
+      }
+    }
+  },
+  "programsCareerSection": {
+    "programs": {
+      "title": "Programme",
+      "description": "Eine komplette 12-wöchige Lernerfahrung mit praktischer Ausbildung, echten Projekten und Karriere-Mentoring — alles darauf ausgelegt, Sie zu einem selbstbewussten MarTech-Profi zu machen.",
+      "imageAlt": "Geschäftsteam-Meeting und Präsentation"
+    },
+    "career": {
+      "title": "Die komplette Startrampe für Ihre  MarTech-Karriere",
+      "description": "Ein strukturiertes, 12-wöchiges Online-Programm, das Sie von null auf Marketing Ops Einstellung bringt. Lassen Sie sich in Branchen-Tools ausbilden, erstellen Sie echte Projekte und erhalten Sie Experten-Karriereunterstützung — alles an einem Ort.",
+      "careerPromise": "Ihr schneller Weg zu einer 65.000€+ Karriere. Sehen Sie, wie MarTech Mastery es möglich macht!",
+      "videoInstruction": "Schauen Sie sich das kurze Video unten an",
+      "videoTitle": "MarTech Mastery Karriere-Programm Video",
+      "videoCaption": "Entdecken Sie, wie MarTech Mastery Ihre Karriere zu 65.000€+ beschleunigen kann"
+    }
+  },
+  "marketingopscurriculumsection": {
+    "title": "Alles, was Sie brauchen, um stark in Marketing Ops zu starten",
+    "description": "Ein 12-wöchiger Lehrplan, der darauf ausgelegt ist, die Workflows, Herausforderungen und ergebnisorientierten Ansätze einer echten Marketing Ops Rolle zu simulieren.",
+    "imageAlt": "Marketing-Profis arbeiten an verschiedenen Aspekten von Marketing Operations",
+    "weeks": {
+      "week1to3": {
+        "weeks": "Woche 1-3",
+        "title": "Marketing-Automatisierung Grundlagen",
+        "description": "Verstehen Sie Plattformen, Kanäle, Workflows, Trigger und Segmentierungslogik."
+      },
+      "week4to6": {
+        "weeks": "Woche 4-6",
+        "title": "Tools Vertiefung",
+        "description": "Meistern Sie Marketo, HubSpot und Salesforce mit geführten praktischen Aufgaben."
+      },
+      "week7to9": {
+        "weeks": "Woche 7-9",
+        "title": "Kampagnenumsetzung + Fehlerbehebung",
+        "description": "Planen, prüfen und starten Sie mehrstufige Kampagnen, während Sie reale Herausforderungen lösen."
+      },
+      "week10to12": {
+        "weeks": "Woche 10-12",
+        "title": "Karrierebereitschaft",
+        "description": "Mock-Interviews, Portfolio-Projekte und eine vollständige Jobstrategie, um Ihre erste Stelle zu sichern."
+      }
+    }
+  },
+  "testimonialSection": {
+    "testimonials": {
+      "title": "Testimonials",
+      "description": "Unsere Alumni haben Karrieren gewechselt, Gehälter verdoppelt und Stellen bei Top-Unternehmen gelandet. Lesen Sie, wie Martech Mastery ihnen den Vorteil verschafft hat.",
+      "imageAlt": "Geschäftsteam-Meeting und Präsentation"
+    },
+    "successStories": {
+      "title": "Hören Sie von den Marketern, denen wir geholfen haben  sich zu verwandeln",
+      "description": "Von Karrierewechslern zu technisch versierten Marketern — sehen Sie, wie Martech Mastery unseren Studenten geholfen hat, Interviews, Jobs und Selbstvertrauen zu landen.",
+      "videoInstruction": "Schauen Sie sich die Erfolgsgeschichten-Videos unten an",
+      "videoTitleTemplate": "Video",
+      "videoCaption": "Entdecken Sie, wie MarTech Mastery Ihre Karriere zu 65.000€+ beschleunigen kann"
+    }
+  },
+  "impactSection": {
+    "impact": {
+      "title": "Unser Einfluss bisher",
+      "graduates": "300+ Absolventen",
+      "jobPlacement": "65% Jobvermittlung innerhalb von 3 Monaten",
+      "countries": "10+ Länder",
+      "averageSalary": "Durchschnittsgehalt: 48.000€–80.000€"
+    },
+    "nextStory": {
+      "title": "Werden Sie Teil der nächsten Erfolgsgeschichte",
+      "description": "Die nächste Kohorte nimmt Bewerbungen an. Seien Sie dabei.",
+      "applyButtonText": "Jetzt bewerben"
+    }
+  }
+}
