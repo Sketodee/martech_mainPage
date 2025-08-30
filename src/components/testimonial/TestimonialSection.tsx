@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import testimonialImage from '../../assets/testimonial.jpg'
 
 const TestimonialSection: React.FC = () => {
   const { t } = useTranslation();
@@ -66,12 +67,15 @@ const TestimonialSection: React.FC = () => {
   };
 
   // Using a business/marketing related YouTube video
-  const youtubeVideos = [
-    { id: "u4ZoJKF_VuA", url: "https://www.youtube.com/embed/u4ZoJKF_VuA" },
-    { id: "dQw4w9WgXcQ", url: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
-    { id: "3JZ_D3ELwOQ", url: "https://www.youtube.com/embed/3JZ_D3ELwOQ" },
-    { id: "2Vv-BfVoq4g", url: "https://www.youtube.com/embed/2Vv-BfVoq4g" }
-  ];
+const youtubeVideos = [
+  { id: "1113005389", url: "https://player.vimeo.com/video/1113005389" }, // Gabriel A
+  { id: "1112617657", url: "https://player.vimeo.com/video/1112617657" }, // Sasie T
+  { id: "1112617703", url: "https://player.vimeo.com/video/1112617703" }, // Kerry B
+  { id: "1112617646", url: "https://player.vimeo.com/video/1112617646" }, // Timi O
+  { id: "1112617691", url: "https://player.vimeo.com/video/1112617691" }, // Ugo Onwuta
+  { id: "1112617668", url: "https://player.vimeo.com/video/1112617668" }  // Joshua A
+];
+
 
   // Extract all translatable content
   const testimonialsTitle = t("testimonialSection.testimonials.title");
@@ -82,7 +86,6 @@ const TestimonialSection: React.FC = () => {
   const successStoriesDescription = t("testimonialSection.successStories.description");
   const videoInstruction = t("testimonialSection.successStories.videoInstruction");
   const videoTitleTemplate = t("testimonialSection.successStories.videoTitleTemplate");
-  const videoCaption = t("testimonialSection.successStories.videoCaption");
 
   return (
     <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8 overflow-hidden" ref={sectionRef}>
@@ -93,7 +96,7 @@ const TestimonialSection: React.FC = () => {
           {/* Left Column - Testimonials Content (Slide from Left) */}
           <div className={`
             space-y-6 transition-all ease-out
-            ${isMobile ? 'duration-800' : 'duration-1000'}
+            ${isMobile ? 'duration-400' : 'duration-500'}
             ${getSlideAnimation('left', isMobile)}
           `}
           style={{ 
@@ -111,7 +114,7 @@ const TestimonialSection: React.FC = () => {
             
             <div className={`
               text-gray-600 text-lg leading-relaxed space-y-4 transition-all ease-out
-              ${isMobile ? 'duration-700' : 'duration-800'}
+              ${isMobile ? 'duration-350' : 'duration-400'}
               ${isVisible 
                 ? 'opacity-100 translate-y-0 scale-100' 
                 : isMobile 
@@ -120,7 +123,7 @@ const TestimonialSection: React.FC = () => {
               }
             `}
             style={{ 
-              transitionDelay: isMobile ? '300ms' : '400ms'
+              transitionDelay: isMobile ? '150ms' : '200ms'
             } as React.CSSProperties}
             >
               <p>
@@ -132,20 +135,20 @@ const TestimonialSection: React.FC = () => {
           {/* Right Column - Image (Slide from Right) */}
           <div className={`
             relative transition-all ease-out
-            ${isMobile ? 'duration-800' : 'duration-1000'}
+            ${isMobile ? 'duration-400' : 'duration-500'}
             ${getSlideAnimation('right', isMobile)}
           `}
           style={{ 
-            transitionDelay: isMobile ? '500ms' : '600ms'
+            transitionDelay: isMobile ? '250ms' : '300ms'
           } as React.CSSProperties}
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=700&h=500&fit=crop"
+                src={testimonialImage}
                 alt={testimonialsImageAlt}
                 className={`
                   w-full h-auto object-cover transition-all ease-out
-                  ${isMobile ? 'duration-600' : 'duration-700'}
+                  ${isMobile ? 'duration-300' : 'duration-350'}
                   ${isVisible 
                     ? 'opacity-100 scale-100' 
                     : isMobile 
@@ -154,7 +157,7 @@ const TestimonialSection: React.FC = () => {
                   }
                 `}
                 style={{ 
-                  transitionDelay: isMobile ? '700ms' : '800ms'
+                  transitionDelay: isMobile ? '350ms' : '400ms'
                 } as React.CSSProperties}
               />
               
@@ -165,7 +168,7 @@ const TestimonialSection: React.FC = () => {
               <div className={`
                 absolute top-6 right-6 w-16 h-12 bg-white/20 backdrop-blur-sm rounded border border-white/30
                 transition-all ease-out
-                ${isMobile ? 'duration-500' : 'duration-600'}
+                ${isMobile ? 'duration-250' : 'duration-300'}
                 ${isVisible 
                   ? 'opacity-100 translate-y-0 scale-100' 
                   : isMobile 
@@ -174,13 +177,13 @@ const TestimonialSection: React.FC = () => {
                 }
               `}
               style={{ 
-                transitionDelay: isMobile ? '900ms' : '1000ms'
+                transitionDelay: isMobile ? '450ms' : '500ms'
               } as React.CSSProperties}
               ></div>
               <div className={`
                 absolute bottom-6 left-6 w-12 h-8 bg-blue-500/20 backdrop-blur-sm rounded border border-blue-400/30
                 transition-all ease-out
-                ${isMobile ? 'duration-500' : 'duration-600'}
+                ${isMobile ? 'duration-250' : 'duration-300'}
                 ${isVisible 
                   ? 'opacity-100 translate-y-0 scale-100' 
                   : isMobile 
@@ -189,7 +192,7 @@ const TestimonialSection: React.FC = () => {
                 }
               `}
               style={{ 
-                transitionDelay: isMobile ? '1100ms' : '1200ms'
+                transitionDelay: isMobile ? '550ms' : '600ms'
               } as React.CSSProperties}
               ></div>
             </div>
@@ -199,11 +202,11 @@ const TestimonialSection: React.FC = () => {
         {/* Success Stories Section - Slide from Top */}
         <div className={`
           text-center mb-16 transition-all ease-out
-          ${isMobile ? 'duration-800' : 'duration-1000'}
+          ${isMobile ? 'duration-400' : 'duration-500'}
           ${getSlideAnimation('top', isMobile)}
         `}
         style={{ 
-          transitionDelay: isMobile ? '1300ms' : '1400ms'
+          transitionDelay: isMobile ? '650ms' : '700ms'
         } as React.CSSProperties}
         >
              <h2 className="
@@ -217,7 +220,7 @@ const TestimonialSection: React.FC = () => {
           
           <p className={`
             text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto mb-12 transition-all ease-out
-            ${isMobile ? 'duration-700' : 'duration-800'}
+            ${isMobile ? 'duration-350' : 'duration-400'}
             ${isVisible 
               ? 'opacity-100 translate-y-0 scale-100' 
               : isMobile 
@@ -226,7 +229,7 @@ const TestimonialSection: React.FC = () => {
             }
           `}
           style={{ 
-            transitionDelay: isMobile ? '1500ms' : '1600ms'
+            transitionDelay: isMobile ? '750ms' : '800ms'
           } as React.CSSProperties}
           >
             {successStoriesDescription}
@@ -235,7 +238,7 @@ const TestimonialSection: React.FC = () => {
           {/* Video Instruction */}
           <div className={`
             mb-8 transition-all ease-out
-            ${isMobile ? 'duration-600' : 'duration-700'}
+            ${isMobile ? 'duration-300' : 'duration-350'}
             ${isVisible 
               ? 'opacity-100 translate-y-0' 
               : isMobile 
@@ -244,14 +247,14 @@ const TestimonialSection: React.FC = () => {
             }
           `}
           style={{ 
-            transitionDelay: isMobile ? '1700ms' : '1800ms'
+            transitionDelay: isMobile ? '800ms' : '900ms'
           } as React.CSSProperties}
           >
             <p className="text-gray-600 flex items-center justify-center space-x-2">
               <span>{videoInstruction}</span>
               <span className={`
                 text-xl transition-all ease-out
-                ${isMobile ? 'duration-600' : 'duration-700'}
+                ${isMobile ? 'duration-300' : 'duration-350'}
                 ${isVisible 
                   ? 'opacity-100 translate-y-0 animate-bounce' 
                   : isMobile 
@@ -260,7 +263,7 @@ const TestimonialSection: React.FC = () => {
                 }
               `}
               style={{ 
-                transitionDelay: isMobile ? '1900ms' : '2000ms'
+                transitionDelay: isMobile ? '900ms' : '1000ms'
               } as React.CSSProperties}
               >
                 👇
@@ -270,76 +273,62 @@ const TestimonialSection: React.FC = () => {
         </div>
 
         {/* Video Players - Alternating Left/Right Slides */}
-        <div className="max-w-4xl mx-auto">
-          {youtubeVideos.map((video, index) => {
-            // Alternate slide directions: even indices from left, odd from right
-            const slideDirection = index % 2 === 0 ? 'left' : 'right';
-            
-            return (
-              <div 
-                key={video.id} 
-                className={`
-                  relative bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl border-2 border-blue-200 
-                  p-2 md:p-2 shadow-lg mb-8 transition-all ease-out
-                  hover:shadow-2xl
-                  ${isMobile 
-                    ? 'duration-700 hover:scale-102' 
-                    : 'duration-900 hover:scale-105'
-                  }
-                  ${getSlideAnimation(slideDirection, isMobile)}
-                `}
-                style={{ 
-                  transitionDelay: isMobile 
-                    ? `${2100 + index * 300}ms`
-                    : `${2200 + index * 400}ms`
-                } as React.CSSProperties}
-              >
-                <div className="relative w-full" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
-                  <iframe
-                    className={`
-                      absolute top-0 left-0 w-full h-full rounded-xl shadow-lg transition-all ease-out
-                      ${isMobile ? 'duration-600' : 'duration-800'}
-                      ${isVisible 
-                        ? 'opacity-100 scale-100' 
-                        : isMobile 
-                          ? 'opacity-0 scale-95' 
-                          : 'opacity-0 scale-90'
-                      }
-                    `}
-                    src={video.url}
-                    title={`${videoTitleTemplate} ${video.id}`}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                    style={{ 
-                      transitionDelay: isMobile 
-                        ? `${2300 + index * 300}ms`
-                        : `${2400 + index * 400}ms`
-                    } as React.CSSProperties}
-                  ></iframe>
-                </div>
-                <p className={`
-                  text-gray-600 text-sm md:text-base font-medium mt-4 text-center transition-all ease-out
-                  ${isMobile ? 'duration-500' : 'duration-600'}
-                  ${isVisible 
-                    ? 'opacity-100 translate-y-0' 
-                    : isMobile 
-                      ? 'opacity-0 translate-y-2' 
-                      : 'opacity-0 translate-y-3'
-                  }
-                `}
-                style={{ 
-                  transitionDelay: isMobile 
-                    ? `${2500 + index * 300}ms`
-                    : `${2600 + index * 400}ms`
-                } as React.CSSProperties}
-                >
-                  {videoCaption}
-                </p>
-              </div>
-            );
-          })}
+       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+  {youtubeVideos.map((video, index) => {
+    // Alternate slide directions: even indices from left, odd from right
+    const slideDirection = index % 2 === 0 ? 'left' : 'right';
+
+    return (
+      <div
+        key={video.id}
+        className={`
+          relative bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl border-2 border-blue-200
+          p-2 md:p-2 shadow-lg transition-all ease-out
+          hover:shadow-2xl
+          ${isMobile 
+            ? 'duration-350 hover:scale-102' 
+            : 'duration-450 hover:scale-105'
+          }
+          ${getSlideAnimation(slideDirection, isMobile)}
+        `}
+        style={{
+          transitionDelay: isMobile
+            ? `${2100 + index * 150}ms`
+            : `${2200 + index * 200}ms`
+        } as React.CSSProperties}
+      >
+        <div
+          className="relative w-full"
+          style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}
+        >
+          <iframe
+            className={`
+              absolute top-0 left-0 w-full h-full rounded-xl shadow-lg transition-all ease-out
+              ${isMobile ? 'duration-300' : 'duration-400'}
+              ${isVisible
+                ? 'opacity-100 scale-100'
+                : isMobile
+                  ? 'opacity-0 scale-95'
+                  : 'opacity-0 scale-90'
+              }
+            `}
+            src={video.url}
+            title={`${videoTitleTemplate} ${video.id}`}
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+            style={{
+              transitionDelay: isMobile
+                ? `${2300 + index * 150}ms`
+                : `${2400 + index * 200}ms`
+            } as React.CSSProperties}
+          ></iframe>
         </div>
+ 
+      </div>
+    );
+  })}
+</div>
+
       </div>
     </section>
   );

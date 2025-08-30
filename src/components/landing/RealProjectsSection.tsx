@@ -65,11 +65,11 @@ const RealProjectsSection = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow duration-300 group"
+              className="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow duration-150 group"
             >
               {/* Icon */}
               <div className="flex justify-center mb-6">
-                <div className={`${project.iconBg} ${project.iconColor} w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`${project.iconBg} ${project.iconColor} w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-150`}>
                   {project.icon}
                 </div>
               </div>

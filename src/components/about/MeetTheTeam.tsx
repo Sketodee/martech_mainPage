@@ -133,11 +133,11 @@ const MeetTheTeam: React.FC = () => {
         {/* Header Section - Slides from Top */}
         <div className={`
           text-center pt-16 pb-12 transition-all ease-out
-          ${isMobile ? 'duration-800' : 'duration-1000'}
+          ${isMobile ? 'duration-400' : 'duration-500'}
           ${getSlideAnimation('top', isMobile)}
         `}
         style={{ 
-          transitionDelay: isMobile ? '100ms' : '200ms'
+          transitionDelay: isMobile ? '50ms' : '100ms'
         } as React.CSSProperties}
         >
           <h2 className="
@@ -151,7 +151,7 @@ const MeetTheTeam: React.FC = () => {
 
           <p className={`
             text-lg text-gray-600 max-w-md mx-auto transition-all ease-out
-            ${isMobile ? 'duration-700' : 'duration-800'}
+            ${isMobile ? 'duration-350' : 'duration-400'}
             ${isVisible 
               ? 'opacity-100 translate-y-0' 
               : isMobile 
@@ -160,7 +160,7 @@ const MeetTheTeam: React.FC = () => {
             }
           `}
           style={{ 
-            transitionDelay: isMobile ? '300ms' : '400ms'
+            transitionDelay: isMobile ? '150ms' : '200ms'
           } as React.CSSProperties}
           >
             {whyWorksSubtitle}
@@ -175,7 +175,7 @@ const MeetTheTeam: React.FC = () => {
               className={`
                 bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all ease-out group
                 hover:-translate-y-2
-                ${isMobile ? 'duration-600' : 'duration-700'}
+                ${isMobile ? 'duration-300' : 'duration-350'}
                 ${index % 2 === 0 
                   ? getSlideAnimation('left', isMobile)
                   : getSlideAnimation('right', isMobile)
@@ -191,8 +191,8 @@ const MeetTheTeam: React.FC = () => {
                 w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 
                 transition-all ease-out
                 ${isMobile 
-                  ? 'duration-400 group-hover:scale-105' 
-                  : 'duration-500 group-hover:scale-110 group-hover:rotate-12'
+                  ? 'duration-200 group-hover:scale-105' 
+                  : 'duration-250 group-hover:scale-110 group-hover:rotate-12'
                 }
                 ${isVisible 
                   ? 'opacity-100 scale-100 rotate-0' 
@@ -203,15 +203,15 @@ const MeetTheTeam: React.FC = () => {
               `}
               style={{ 
                 transitionDelay: isMobile 
-                  ? `${700 + index * 150}ms`
-                  : `${800 + index * 200}ms`
+                  ? `${700 + index * 50}ms`
+                  : `${800 + index * 100}ms`
               } as React.CSSProperties}
               >
                 {feature.icon}
               </div>
               <h3 className={`
                 text-xl font-semibold text-gray-900 mb-4 transition-all ease-out
-                ${isMobile ? 'duration-500' : 'duration-600'}
+                ${isMobile ? 'duration-250' : 'duration-300'}
                 ${isVisible 
                   ? 'opacity-100 translate-y-0' 
                   : isMobile 
@@ -221,15 +221,15 @@ const MeetTheTeam: React.FC = () => {
               `}
               style={{ 
                 transitionDelay: isMobile 
-                  ? `${900 + index * 150}ms`
-                  : `${1000 + index * 200}ms`
+                  ? `${900 + index * 50}ms`
+                  : `${1000 + index * 100}ms`
               } as React.CSSProperties}
               >
                 {feature.title}
               </h3>
               <p className={`
                 text-gray-600 leading-relaxed transition-all ease-out
-                ${isMobile ? 'duration-500' : 'duration-600'}
+                ${isMobile ? 'duration-250' : 'duration-300'}
                 ${isVisible 
                   ? 'opacity-100 translate-y-0' 
                   : isMobile 
@@ -239,8 +239,8 @@ const MeetTheTeam: React.FC = () => {
               `}
               style={{ 
                 transitionDelay: isMobile 
-                  ? `${1100 + index * 150}ms`
-                  : `${1200 + index * 200}ms`
+                  ? `${1100 + index * 50}ms`
+                  : `${1200 + index * 100}ms`
               } as React.CSSProperties}
               >
                 {feature.description}
@@ -254,11 +254,11 @@ const MeetTheTeam: React.FC = () => {
           {/* Team Header - Slides from Bottom */}
           <div className={`
             transition-all ease-out
-            ${isMobile ? 'duration-800' : 'duration-1000'}
+            ${isMobile ? 'duration-400' : 'duration-500'}
             ${getSlideAnimation('bottom', isMobile)}
           `}
           style={{ 
-            transitionDelay: isMobile ? '1300ms' : '1600ms'
+            transitionDelay: isMobile ? '650ms' : '800ms'
           } as React.CSSProperties}
           >
             <h2 className="
@@ -271,7 +271,7 @@ const MeetTheTeam: React.FC = () => {
               </h2>
             <p className={`
               text-lg text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed transition-all ease-out
-              ${isMobile ? 'duration-700' : 'duration-800'}
+              ${isMobile ? 'duration-350' : 'duration-400'}
               ${isVisible 
                 ? 'opacity-100 translate-y-0' 
                 : isMobile 
@@ -280,7 +280,7 @@ const MeetTheTeam: React.FC = () => {
               }
             `}
             style={{ 
-              transitionDelay: isMobile ? '1500ms' : '1800ms'
+              transitionDelay: isMobile ? '750ms' : '900ms'
             } as React.CSSProperties}
             >
               {teamDescription}
@@ -298,20 +298,20 @@ const MeetTheTeam: React.FC = () => {
                   key={index}
                   className={`
                     group cursor-pointer transition-all ease-out
-                    ${isMobile ? 'duration-700' : 'duration-800'}
+                    ${isMobile ? 'duration-350' : 'duration-400'}
                     ${getSlideAnimation(slideDirection, isMobile)}
                   `}
                   style={{ 
                     transitionDelay: isMobile 
-                      ? `${1700 + index * 200}ms`
-                      : `${2000 + index * 250}ms`
+                      ? `${1700 + index * 100}ms`
+                      : `${2000 + index * 150}ms`
                   } as React.CSSProperties}
                 >
                   <div className={`
                     relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all ease-out
                     ${isMobile 
-                      ? 'duration-500 hover:-translate-y-1' 
-                      : 'duration-700 hover:-translate-y-2'
+                      ? 'duration-250 hover:-translate-y-1' 
+                      : 'duration-350 hover:-translate-y-2'
                     }
                   `}>
                     <div className="aspect-[3/4] relative">
@@ -321,8 +321,8 @@ const MeetTheTeam: React.FC = () => {
                         className={`
                           w-full h-full object-cover transition-all ease-out
                           ${isMobile 
-                            ? 'duration-400 group-hover:scale-105' 
-                            : 'duration-700 group-hover:scale-110'
+                            ? 'duration-200 group-hover:scale-105' 
+                            : 'duration-350 group-hover:scale-110'
                           }
                           ${isVisible 
                             ? 'opacity-100 scale-100' 
@@ -333,8 +333,8 @@ const MeetTheTeam: React.FC = () => {
                         `}
                         style={{ 
                           transitionDelay: isMobile 
-                            ? `${1900 + index * 200}ms`
-                            : `${2200 + index * 250}ms`
+                            ? `${1900 + index * 100}ms`
+                            : `${2200 + index * 150}ms`
                         } as React.CSSProperties}
                       />
                       
@@ -344,7 +344,7 @@ const MeetTheTeam: React.FC = () => {
                       {/* Text Overlay */}
                       <div className={`
                         absolute bottom-0 left-0 right-0 p-6 text-white transition-all ease-out
-                        ${isMobile ? 'duration-600' : 'duration-700'}
+                        ${isMobile ? 'duration-300' : 'duration-350'}
                         ${isVisible 
                           ? 'opacity-100 translate-y-0' 
                           : isMobile 
@@ -354,8 +354,8 @@ const MeetTheTeam: React.FC = () => {
                       `}
                       style={{ 
                         transitionDelay: isMobile 
-                          ? `${2100 + index * 200}ms`
-                          : `${2400 + index * 250}ms`
+                          ? `${2100 + index * 100}ms`
+                          : `${2400 + index * 150}ms`
                       } as React.CSSProperties}
                       >
                         <h4 className="text-xl font-bold mb-1">
@@ -369,7 +369,7 @@ const MeetTheTeam: React.FC = () => {
                       {/* Hover Effect Overlay */}
                       <div className={`
                         absolute inset-0 bg-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity ease-out
-                        ${isMobile ? 'duration-300' : 'duration-500'}
+                        ${isMobile ? 'duration-150' : 'duration-250'}
                       `}></div>
                     </div>
                   </div>

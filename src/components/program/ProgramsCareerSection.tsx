@@ -1,11 +1,8 @@
 import { useTranslation } from 'react-i18next';
+import programImage from '../../assets/product.jpg';
 
 const ProgramsCareerSection = () => {
   const { t } = useTranslation();
-
-  // Using a business/marketing related YouTube video
-  const youtubeVideoId = "u4ZoJKF_VuA"; // Simon Sinek: How great leaders inspire action
-  const youtubeEmbedUrl = `https://www.youtube.com/embed/${youtubeVideoId}?rel=0&modestbranding=1&showinfo=0`;
 
   // Extract all translatable content
   const programsTitle = t("programsCareerSection.programs.title");
@@ -47,7 +44,7 @@ const ProgramsCareerSection = () => {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=700&h=500&fit=crop"
+                src={programImage}
                 alt={programsImageAlt}
                 className="w-full h-auto object-cover"
               />
@@ -92,16 +89,17 @@ const ProgramsCareerSection = () => {
         {/* Video Player */}
         <div className="max-w-4xl mx-auto">
           <div className="relative bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl border-2 border-blue-200 p-2 md:p-2 shadow-lg">
-            <div className="relative w-full" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
-              <iframe
-                className="absolute top-0 left-0 w-full h-full rounded-xl shadow-lg"
-                src={youtubeEmbedUrl}
-                title={videoTitle}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
-            </div>
+           <div className="relative w-full" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
+  <iframe
+    className="absolute top-0 left-0 w-full h-full rounded-xl shadow-lg"
+     src="https://player.vimeo.com/video/1109831458"
+    title={videoTitle}
+    frameBorder="0"
+    allow="autoplay; fullscreen; picture-in-picture"
+    allowFullScreen
+  ></iframe>
+</div>
+
             <p className="text-gray-600 text-sm md:text-base font-medium mt-4 text-center">
               {videoCaption}
             </p>

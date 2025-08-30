@@ -77,7 +77,7 @@ const ImpactSection = () => {
           <p className="text-gray-600 mb-8 text-lg">
             {nextStoryDescription}
           </p>
-          <button className="text-white sm:w-auto px-8 py-4 bg-gradient-to-b from-[var(--color-blueFour)] to-[var(--color-blueOne)]  rounded-full font-semibold hover:from-gray-950 hover:to-[var(--color-blueThree)] transition-all duration-200 transform hover:scale-105">
+          <button className="text-white sm:w-auto px-8 py-4 bg-gradient-to-b from-[var(--color-blueFour)] to-[var(--color-blueOne)]  rounded-full font-semibold hover:from-gray-950 hover:to-[var(--color-blueThree)] transition-all duration-100 transform hover:scale-105">
                 {applyButtonText}
               </button>
 

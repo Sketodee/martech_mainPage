@@ -76,8 +76,10 @@
   },
   "heroProgram": {
     "headline": {
-      "lineOne": "Earn More. Burn Less. Your",
-      "lineTwo": "Marketing Tech Career Starts Here."
+      "lineOneA": "High Earning Power",
+      "lineOneB": "Lasting Job Security",
+      "lineOneC": "Work-Life Balance",
+      "lineTwo": "Your Marketing Tech Career Starts Here."
     },
     "description": "Break into Marketing Operations — one of tech's most rewarding and overlooked career paths. In just 12 weeks, master real tools like Marketo, HubSpot, and Salesforce, build job-ready projects, and launch a high-paying career without the burnout.",
     "cta": {

@@ -117,7 +117,7 @@ const MarketingOpsCurriculumSection: React.FC = () => {
           <p className={`
             text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto
             transition-all ease-out
-            ${isMobile ? 'duration-800' : 'duration-1000'}
+            ${isMobile ? 'duration-400' : 'duration-500'}
             ${isVisible 
               ? 'opacity-100 translate-y-0 scale-100' 
               : getAnimationClasses(
@@ -138,7 +138,7 @@ const MarketingOpsCurriculumSection: React.FC = () => {
         <div className={`
           grid lg:grid-cols-2 gap-12 lg:gap-16 items-start
           transition-all ease-out
-          ${isMobile ? 'duration-800' : 'duration-1000'}
+          ${isMobile ? 'duration-400' : 'duration-500'}
           ${isVisible 
             ? 'opacity-100 translate-y-0' 
             : getAnimationClasses(
@@ -148,7 +148,7 @@ const MarketingOpsCurriculumSection: React.FC = () => {
           }
         `}
         style={{ 
-          transitionDelay: isMobile ? '200ms' : '400ms'
+          transitionDelay: isMobile ? '100ms' : '200ms'
         } as React.CSSProperties}
         >
           
@@ -161,8 +161,8 @@ const MarketingOpsCurriculumSection: React.FC = () => {
                   ${week.bgColor} ${week.borderColor} border-2 rounded-2xl p-6 shadow-sm 
                   hover:shadow-2xl transition-all cursor-pointer transform
                   ${isMobile 
-                    ? 'duration-400 hover:scale-102' 
-                    : 'duration-500 hover:scale-105'
+                    ? 'duration-200 hover:scale-102' 
+                    : 'duration-250 hover:scale-105'
                   }
                   ${isVisible 
                     ? 'opacity-100 translate-y-0 scale-100 rotate-0' 
@@ -184,7 +184,7 @@ const MarketingOpsCurriculumSection: React.FC = () => {
                   <div className={`
                     text-blue-600 font-bold text-sm uppercase tracking-wide
                     transition-all ease-out
-                    ${isMobile ? 'duration-300' : 'duration-400'}
+                    ${isMobile ? 'duration-150' : 'duration-200'}
                     ${isVisible 
                       ? 'opacity-100 translate-x-0' 
                       : getAnimationClasses(
@@ -195,8 +195,8 @@ const MarketingOpsCurriculumSection: React.FC = () => {
                   `}
                   style={{ 
                     transitionDelay: isMobile 
-                      ? `${500 + index * 150}ms`
-                      : `${700 + index * 200}ms`
+                      ? `${500 + index * 50}ms`
+                      : `${700 + index * 100}ms`
                   } as React.CSSProperties}
                   >
                     {week.weeks}
@@ -204,7 +204,7 @@ const MarketingOpsCurriculumSection: React.FC = () => {
                   <h3 className={`
                     text-xl font-bold text-gray-900
                     transition-all ease-out
-                    ${isMobile ? 'duration-400' : 'duration-500'}
+                    ${isMobile ? 'duration-200' : 'duration-250'}
                     ${isVisible 
                       ? 'opacity-100 translate-y-0' 
                       : getAnimationClasses(
@@ -215,8 +215,8 @@ const MarketingOpsCurriculumSection: React.FC = () => {
                   `}
                   style={{ 
                     transitionDelay: isMobile 
-                      ? `${600 + index * 150}ms`
-                      : `${800 + index * 200}ms`
+                      ? `${600 + index * 50}ms`
+                      : `${800 + index * 100}ms`
                   } as React.CSSProperties}
                   >
                     {week.title}
@@ -224,7 +224,7 @@ const MarketingOpsCurriculumSection: React.FC = () => {
                   <p className={`
                     text-gray-600 leading-relaxed
                     transition-all ease-out
-                    ${isMobile ? 'duration-400' : 'duration-500'}
+                    ${isMobile ? 'duration-200' : 'duration-250'}
                     ${isVisible 
                       ? 'opacity-100 translate-y-0' 
                       : getAnimationClasses(
@@ -235,8 +235,8 @@ const MarketingOpsCurriculumSection: React.FC = () => {
                   `}
                   style={{ 
                     transitionDelay: isMobile 
-                      ? `${700 + index * 150}ms`
-                      : `${900 + index * 200}ms`
+                      ? `${700 + index * 50}ms`
+                      : `${900 + index * 100}ms`
                   } as React.CSSProperties}
                   >
                     {week.description}
@@ -249,7 +249,7 @@ const MarketingOpsCurriculumSection: React.FC = () => {
           {/* Right Column - Dynamic Image */}
           <div className={`
             relative transition-all ease-out
-            ${isMobile ? 'duration-800' : 'duration-1200'}
+            ${isMobile ? 'duration-400' : 'duration-600'}
             ${isVisible 
               ? 'opacity-100 translate-x-0 scale-100' 
               : getAnimationClasses(
@@ -259,7 +259,7 @@ const MarketingOpsCurriculumSection: React.FC = () => {
             }
           `}
           style={{ 
-            transitionDelay: isMobile ? '800ms' : '1200ms'
+            transitionDelay: isMobile ? '400ms' : '600ms'
           } as React.CSSProperties}
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
@@ -268,7 +268,7 @@ const MarketingOpsCurriculumSection: React.FC = () => {
                 alt={imageAlt}
                 className={`
                   w-full h-auto object-cover transition-all ease-in-out
-                  ${isMobile ? 'duration-400' : 'duration-500'}
+                  ${isMobile ? 'duration-200' : 'duration-250'}
                   ${isVisible 
                     ? 'opacity-100 scale-100' 
                     : getAnimationClasses(
@@ -289,7 +289,7 @@ const MarketingOpsCurriculumSection: React.FC = () => {
               <div className={`
                 absolute top-6 right-6 w-16 h-12 bg-white/20 backdrop-blur-sm rounded-lg border border-white/30 flex items-center justify-center
                 transition-all ease-out
-                ${isMobile ? 'duration-600' : 'duration-700'}
+                ${isMobile ? 'duration-300' : 'duration-350'}
                 ${isVisible 
                   ? 'opacity-100 translate-y-0 scale-100' 
                   : getAnimationClasses(
@@ -299,7 +299,7 @@ const MarketingOpsCurriculumSection: React.FC = () => {
                 }
               `}
               style={{ 
-                transitionDelay: isMobile ? '1200ms' : '1600ms'
+                transitionDelay: isMobile ? '600ms' : '800ms'
               } as React.CSSProperties}
               >
                 <div className="w-8 h-6 bg-blue-400/70 rounded-sm"></div>
@@ -308,7 +308,7 @@ const MarketingOpsCurriculumSection: React.FC = () => {
               <div className={`
                 absolute bottom-6 left-6 w-20 h-16 bg-white/20 backdrop-blur-sm rounded-lg border border-white/30 p-2
                 transition-all ease-out
-                ${isMobile ? 'duration-600' : 'duration-700'}
+                ${isMobile ? 'duration-300' : 'duration-350'}
                 ${isVisible 
                   ? 'opacity-100 translate-y-0 scale-100' 
                   : getAnimationClasses(
@@ -318,7 +318,7 @@ const MarketingOpsCurriculumSection: React.FC = () => {
                 }
               `}
               style={{ 
-                transitionDelay: isMobile ? '1400ms' : '1800ms'
+                transitionDelay: isMobile ? '700ms' : '800ms'
               } as React.CSSProperties}
               >
                 <div className="space-y-1">
@@ -332,7 +332,7 @@ const MarketingOpsCurriculumSection: React.FC = () => {
               <div className={`
                 absolute top-1/2 left-6 w-3 h-3 bg-blue-500 rounded-full
                 transition-all ease-out
-                ${isMobile ? 'duration-500' : 'duration-600'}
+                ${isMobile ? 'duration-250' : 'duration-300'}
                 ${isVisible 
                   ? 'opacity-100 scale-100 animate-pulse' 
                   : getAnimationClasses(
@@ -342,13 +342,13 @@ const MarketingOpsCurriculumSection: React.FC = () => {
                 }
               `}
               style={{ 
-                transitionDelay: isMobile ? '1600ms' : '2000ms'
+                transitionDelay: isMobile ? '800ms' : '1000ms'
               } as React.CSSProperties}
               ></div>
               <div className={`
                 absolute bottom-1/3 right-1/4 w-2 h-2 bg-green-500 rounded-full
                 transition-all ease-out
-                ${isMobile ? 'duration-500' : 'duration-600'}
+                ${isMobile ? 'duration-250' : 'duration-300'}
                 ${isVisible 
                   ? 'opacity-100 scale-100 animate-pulse' 
                   : getAnimationClasses(
@@ -358,7 +358,7 @@ const MarketingOpsCurriculumSection: React.FC = () => {
                 }
               `}
               style={{ 
-                transitionDelay: isMobile ? '1800ms' : '2200ms',
+                transitionDelay: isMobile ? '800ms' : '1200ms',
                 animationDelay: '0.5s'
               } as React.CSSProperties}
               ></div>
@@ -368,7 +368,7 @@ const MarketingOpsCurriculumSection: React.FC = () => {
                 <div className={`
                   absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium
                   transition-all ease-out
-                  ${isMobile ? 'duration-300' : 'duration-400'}
+                  ${isMobile ? 'duration-150' : 'duration-200'}
                   opacity-100 scale-100
                 `}>
                   {curriculumWeeks.find(w => w.id === hoveredWeek)?.weeks}

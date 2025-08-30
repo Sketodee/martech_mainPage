@@ -91,7 +91,7 @@ const ContactFormSection = () => {
                   onChange={handleInputChange}
                   placeholder={namePlaceholder}
                   required
-                  className="w-full  bg-white px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 placeholder-gray-400"
+                  className="w-full  bg-white px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-100 placeholder-gray-400"
                 />
                 <p className="text-xs text-blue-600">{requiredText}</p>
               </div>
@@ -109,7 +109,7 @@ const ContactFormSection = () => {
                   onChange={handleInputChange}
                   placeholder={emailPlaceholder}
                   required
-                  className="w-full bg-white px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 placeholder-gray-400"
+                  className="w-full bg-white px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-100 placeholder-gray-400"
                 />
                 <p className="text-xs text-blue-600">{requiredText}</p>
               </div>
@@ -126,7 +126,7 @@ const ContactFormSection = () => {
                   onChange={handleInputChange}
                   placeholder={messagePlaceholder}
                   rows={4}
-                  className="w-full bg-white  px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 placeholder-gray-400 resize-none"
+                  className="w-full bg-white  px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-100 placeholder-gray-400 resize-none"
                 />
                 <p className="text-xs text-gray-500">
                   {maxCharText} ({charCount}/500)
@@ -136,7 +136,7 @@ const ContactFormSection = () => {
               {/* Submit Button */}
               <button 
                onClick={handleSubmit}
-              className=" text-white sm:w-auto px-8 py-4 bg-gradient-to-b from-[var(--color-blueFour)] to-[var(--color-blueOne)]  rounded-full font-semibold hover:from-gray-950 hover:to-[var(--color-blueThree)] transition-all duration-200 transform hover:scale-105">
+              className=" text-white sm:w-auto px-8 py-4 bg-gradient-to-b from-[var(--color-blueFour)] to-[var(--color-blueOne)]  rounded-full font-semibold hover:from-gray-950 hover:to-[var(--color-blueThree)] transition-all duration-100 transform hover:scale-105">
                 {buttonText}
               </button>
             </div>

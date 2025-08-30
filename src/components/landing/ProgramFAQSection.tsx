@@ -87,7 +87,7 @@ const ProgramFAQSection = () => {
               </p>
             </div>
             
-          <button className="text-white sm:w-auto px-8 py-4 bg-gradient-to-b from-[var(--color-blueFour)] to-[var(--color-blueOne)]  rounded-full font-semibold hover:from-gray-950 hover:to-[var(--color-blueThree)] transition-all duration-200 transform hover:scale-105">
+          <button className="text-white sm:w-auto px-8 py-4 bg-gradient-to-b from-[var(--color-blueFour)] to-[var(--color-blueOne)]  rounded-full font-semibold hover:from-gray-950 hover:to-[var(--color-blueThree)] transition-all duration-100 transform hover:scale-105">
                 {viewAllButton}
               </button>
           </div>
@@ -101,13 +101,13 @@ const ProgramFAQSection = () => {
               >
                 <button
                   onClick={() => toggleFAQ(faq.id)}
-                  className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 group"
+                  className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-100 group"
                 >
                   <span className="text-gray-900 font-medium text-base pr-4 leading-relaxed">
                     {faq.question}
                   </span>
                   <div className="flex-shrink-0">
-                    <div className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center group-hover:border-blue-600 group-hover:text-blue-600 transition-colors duration-200">
+                    <div className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center group-hover:border-blue-600 group-hover:text-blue-600 transition-colors duration-100">
                       {openFAQ === faq.id ? (
                         <FaMinus className="w-3 h-3" />
                       ) : (

@@ -76,7 +76,9 @@
   },
   "heroProgram": {
     "headline": {
-      "lineOne": "Mehr verdienen. Weniger brennen. Ihre",
+     "lineOneA": "Hohe Verdienstmöglichkeiten",
+"lineOneB": "Dauerhafte Arbeitsplatzsicherheit",
+"lineOneC": "Work-Life-Balance",
       "lineTwo": "Marketing Tech Karriere beginnt hier."
     },
     "description": "Steigen Sie in Marketing Operations ein — einen der lohnendsten und übersehenen Karrierewege in der Tech-Branche. Meistern Sie in nur 12 Wochen echte Tools wie Marketo, HubSpot und Salesforce, erstellen Sie jobfertige Projekte und starten Sie eine hochbezahlte Karriere ohne Burnout.",

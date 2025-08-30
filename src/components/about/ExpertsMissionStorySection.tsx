@@ -62,7 +62,7 @@ const ExpertsMissionStorySection: React.FC = () => {
         {/* Built by Experts Section */}
         <div className={`
           text-center mb-20 transition-all ease-out
-          ${isMobile ? 'duration-800' : 'duration-1000'}
+          ${isMobile ? 'duration-400' : 'duration-500'}
           ${isVisible 
             ? 'opacity-100 translate-y-0' 
             : getAnimationClasses(
@@ -72,7 +72,7 @@ const ExpertsMissionStorySection: React.FC = () => {
           }
         `}
         style={{ 
-          transitionDelay: isMobile ? '100ms' : '200ms'
+          transitionDelay: isMobile ? '50ms' : '100ms'
         } as React.CSSProperties}
         >
           <h2 className="
@@ -87,7 +87,7 @@ const ExpertsMissionStorySection: React.FC = () => {
           <p className={`
             text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto mb-12
             transition-all ease-out
-            ${isMobile ? 'duration-700' : 'duration-800'}
+            ${isMobile ? 'duration-350' : 'duration-400'}
             ${isVisible 
               ? 'opacity-100 translate-y-0 scale-100' 
               : getAnimationClasses(
@@ -97,7 +97,7 @@ const ExpertsMissionStorySection: React.FC = () => {
             }
           `}
           style={{ 
-            transitionDelay: isMobile ? '300ms' : '400ms'
+            transitionDelay: isMobile ? '150ms' : '200ms'
           } as React.CSSProperties}
           >
             {expertsDescription}
@@ -109,8 +109,8 @@ const ExpertsMissionStorySection: React.FC = () => {
            hover:from-gray-950 hover:to-[var(--color-blueThree)] hover:shadow-2xl
            active:scale-95
            ${isMobile 
-             ? 'duration-500 hover:scale-105' 
-             : 'duration-700 hover:scale-110 hover:rotate-1'
+             ? 'duration-250 hover:scale-105' 
+             : 'duration-350 hover:scale-110 hover:rotate-1'
            }
            ${isVisible 
              ? 'opacity-100 translate-y-0 scale-100' 
@@ -121,7 +121,7 @@ const ExpertsMissionStorySection: React.FC = () => {
            }
          `}
          style={{ 
-           transitionDelay: isMobile ? '500ms' : '600ms'
+           transitionDelay: isMobile ? '250ms' : '300ms'
          } as React.CSSProperties}
          >
            {expertsButtonText}
@@ -131,7 +131,7 @@ const ExpertsMissionStorySection: React.FC = () => {
         {/* Our Mission Section */}
         <div className={`
           text-center mb-20 transition-all ease-out
-          ${isMobile ? 'duration-800' : 'duration-1000'}
+          ${isMobile ? 'duration-400' : 'duration-500'}
           ${isVisible 
             ? 'opacity-100 translate-y-0' 
             : getAnimationClasses(
@@ -141,7 +141,7 @@ const ExpertsMissionStorySection: React.FC = () => {
           }
         `}
         style={{ 
-          transitionDelay: isMobile ? '700ms' : '800ms'
+          transitionDelay: isMobile ? '350ms' : '400ms'
         } as React.CSSProperties}
         >
            <h2 className="
@@ -156,7 +156,7 @@ const ExpertsMissionStorySection: React.FC = () => {
           <div className="text-gray-600 text-lg leading-relaxed space-y-6 max-w-3xl mx-auto">
             <p className={`
               transition-all ease-out
-              ${isMobile ? 'duration-600' : 'duration-700'}
+              ${isMobile ? 'duration-300' : 'duration-350'}
               ${isVisible 
                 ? 'opacity-100 translate-y-0 scale-100' 
                 : getAnimationClasses(
@@ -166,7 +166,7 @@ const ExpertsMissionStorySection: React.FC = () => {
               }
             `}
             style={{ 
-              transitionDelay: isMobile ? '900ms' : '1000ms'
+              transitionDelay: isMobile ? '450ms' : '500ms'
             } as React.CSSProperties}
             >
               {missionParagraph1}
@@ -174,7 +174,7 @@ const ExpertsMissionStorySection: React.FC = () => {
             
             <p className={`
               transition-all ease-out
-              ${isMobile ? 'duration-600' : 'duration-700'}
+              ${isMobile ? 'duration-300' : 'duration-350'}
               ${isVisible 
                 ? 'opacity-100 translate-y-0 scale-100' 
                 : getAnimationClasses(
@@ -184,7 +184,7 @@ const ExpertsMissionStorySection: React.FC = () => {
               }
             `}
             style={{ 
-              transitionDelay: isMobile ? '1100ms' : '1200ms'
+              transitionDelay: isMobile ? '550ms' : '600ms'
             } as React.CSSProperties}
             >
               {missionParagraph2}
@@ -195,7 +195,7 @@ const ExpertsMissionStorySection: React.FC = () => {
         {/* Our Story Section */}
         <div className={`
           text-center transition-all ease-out
-          ${isMobile ? 'duration-800' : 'duration-1000'}
+          ${isMobile ? 'duration-400' : 'duration-500'}
           ${isVisible 
             ? 'opacity-100 translate-y-0' 
             : getAnimationClasses(
@@ -205,7 +205,7 @@ const ExpertsMissionStorySection: React.FC = () => {
           }
         `}
         style={{ 
-          transitionDelay: isMobile ? '1300ms' : '1400ms'
+          transitionDelay: isMobile ? '650ms' : '700ms'
         } as React.CSSProperties}
         >
           <h2 className="
@@ -220,7 +220,7 @@ const ExpertsMissionStorySection: React.FC = () => {
           <div className="text-gray-600 text-lg leading-relaxed space-y-6 max-w-3xl mx-auto">
             <p className={`
               transition-all ease-out
-              ${isMobile ? 'duration-600' : 'duration-700'}
+              ${isMobile ? 'duration-300' : 'duration-350'}
               ${isVisible 
                 ? 'opacity-100 translate-y-0 scale-100' 
                 : getAnimationClasses(
@@ -230,7 +230,7 @@ const ExpertsMissionStorySection: React.FC = () => {
               }
             `}
             style={{ 
-              transitionDelay: isMobile ? '1500ms' : '1600ms'
+              transitionDelay: isMobile ? '750ms' : '800ms'
             } as React.CSSProperties}
             >
               {storyParagraph1}
@@ -238,7 +238,7 @@ const ExpertsMissionStorySection: React.FC = () => {
             
             <p className={`
               transition-all ease-out
-              ${isMobile ? 'duration-600' : 'duration-700'}
+              ${isMobile ? 'duration-300' : 'duration-350'}
               ${isVisible 
                 ? 'opacity-100 translate-y-0 scale-100' 
                 : getAnimationClasses(
@@ -248,7 +248,7 @@ const ExpertsMissionStorySection: React.FC = () => {
               }
             `}
             style={{ 
-              transitionDelay: isMobile ? '1700ms' : '1800ms'
+              transitionDelay: isMobile ? '850ms' : '900ms'
             } as React.CSSProperties}
             >
               {storyParagraph2}

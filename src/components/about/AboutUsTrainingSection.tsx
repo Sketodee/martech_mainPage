@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import aboutImage from '../../assets/about.jpg'
 
 const AboutUsTrainingSection: React.FC = () => {
   const { t } = useTranslation();
@@ -43,8 +44,6 @@ const AboutUsTrainingSection: React.FC = () => {
   };
 
   // Using a business/marketing related YouTube video
-  const youtubeVideoId = "u4ZoJKF_VuA"; // Simon Sinek: How great leaders inspire action
-  const youtubeEmbedUrl = `https://www.youtube.com/embed/${youtubeVideoId}?rel=0&modestbranding=1&showinfo=0`;
 
   // Extract all translatable content
   const aboutTitle = t("aboutUsTrainingSection.about.title");
@@ -54,7 +53,6 @@ const AboutUsTrainingSection: React.FC = () => {
   const careerPromise = t("aboutUsTrainingSection.training.careerPromise");
   const videoInstruction = t("aboutUsTrainingSection.training.videoInstruction");
   const businessImageAlt = t("aboutUsTrainingSection.about.imageAlt");
-  const videoTitle = t("aboutUsTrainingSection.training.videoTitle");
   const videoCaption = t("aboutUsTrainingSection.training.videoCaption");
 
   return (
@@ -65,7 +63,7 @@ const AboutUsTrainingSection: React.FC = () => {
         <div className={`
           grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20
           transition-all ease-out
-          ${isMobile ? 'duration-800' : 'duration-1000'}
+          ${isMobile ? 'duration-400' : 'duration-500'}
           ${isVisible 
             ? 'opacity-100 translate-y-0' 
             : getAnimationClasses(
@@ -75,7 +73,7 @@ const AboutUsTrainingSection: React.FC = () => {
           }
         `}
         style={{ 
-          transitionDelay: isMobile ? '100ms' : '200ms'
+          transitionDelay: isMobile ? '50ms' : '100ms'
         } as React.CSSProperties}
         >
           {/* Left Column - About Us Content */}
@@ -92,7 +90,7 @@ const AboutUsTrainingSection: React.FC = () => {
             <div className={`
               text-gray-600 text-lg leading-relaxed space-y-4
               transition-all ease-out
-              ${isMobile ? 'duration-700' : 'duration-800'}
+              ${isMobile ? 'duration-350' : 'duration-400'}
               ${isVisible 
                 ? 'opacity-100 translate-y-0 scale-100' 
                 : getAnimationClasses(
@@ -102,7 +100,7 @@ const AboutUsTrainingSection: React.FC = () => {
               }
             `}
             style={{ 
-              transitionDelay: isMobile ? '300ms' : '400ms'
+              transitionDelay: isMobile ? '150ms' : '200ms'
             } as React.CSSProperties}
             >
               <p>
@@ -114,7 +112,7 @@ const AboutUsTrainingSection: React.FC = () => {
           {/* Right Column - Business Meeting Image */}
           <div className={`
             relative transition-all ease-out
-            ${isMobile ? 'duration-800' : 'duration-1000'}
+            ${isMobile ? 'duration-400' : 'duration-500'}
             ${isVisible 
               ? 'opacity-100 translate-x-0 scale-100' 
               : getAnimationClasses(
@@ -124,16 +122,16 @@ const AboutUsTrainingSection: React.FC = () => {
             }
           `}
           style={{ 
-            transitionDelay: isMobile ? '500ms' : '600ms'
+            transitionDelay: isMobile ? '250ms' : '300ms'
           } as React.CSSProperties}
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=700&h=500&fit=crop"
+                src={aboutImage}
                 alt={businessImageAlt}
                 className={`
                   w-full h-auto object-cover transition-all ease-out
-                  ${isMobile ? 'duration-600' : 'duration-700'}
+                  ${isMobile ? 'duration-300' : 'duration-350'}
                   ${isVisible 
                     ? 'opacity-100 scale-100' 
                     : getAnimationClasses(
@@ -143,7 +141,7 @@ const AboutUsTrainingSection: React.FC = () => {
                   }
                 `}
                 style={{ 
-                  transitionDelay: isMobile ? '700ms' : '800ms'
+                  transitionDelay: isMobile ? '350ms' : '400ms'
                 } as React.CSSProperties}
               />
               
@@ -154,7 +152,7 @@ const AboutUsTrainingSection: React.FC = () => {
               <div className={`
                 absolute top-6 right-6 w-16 h-12 bg-white/20 backdrop-blur-sm rounded border border-white/30
                 transition-all ease-out
-                ${isMobile ? 'duration-500' : 'duration-600'}
+                ${isMobile ? 'duration-250' : 'duration-300'}
                 ${isVisible 
                   ? 'opacity-100 translate-y-0 scale-100' 
                   : getAnimationClasses(
@@ -164,13 +162,13 @@ const AboutUsTrainingSection: React.FC = () => {
                 }
               `}
               style={{ 
-                transitionDelay: isMobile ? '900ms' : '1000ms'
+                transitionDelay: isMobile ? '450ms' : '500ms'
               } as React.CSSProperties}
               ></div>
               <div className={`
                 absolute bottom-6 left-6 w-12 h-8 bg-blue-500/20 backdrop-blur-sm rounded border border-blue-400/30
                 transition-all ease-out
-                ${isMobile ? 'duration-500' : 'duration-600'}
+                ${isMobile ? 'duration-250' : 'duration-300'}
                 ${isVisible 
                   ? 'opacity-100 translate-y-0 scale-100' 
                   : getAnimationClasses(
@@ -180,7 +178,7 @@ const AboutUsTrainingSection: React.FC = () => {
                 }
               `}
               style={{ 
-                transitionDelay: isMobile ? '1100ms' : '1200ms'
+                transitionDelay: isMobile ? '550ms' : '600ms'
               } as React.CSSProperties}
               ></div>
             </div>
@@ -201,7 +199,7 @@ const AboutUsTrainingSection: React.FC = () => {
           <p className={`
             text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto mb-12
             transition-all ease-out
-            ${isMobile ? 'duration-800' : 'duration-1000'}
+            ${isMobile ? 'duration-400' : 'duration-500'}
             ${isVisible 
               ? 'opacity-100 translate-y-0 scale-100' 
               : getAnimationClasses(
@@ -211,7 +209,7 @@ const AboutUsTrainingSection: React.FC = () => {
             }
           `}
           style={{ 
-            transitionDelay: isMobile ? '1300ms' : '1400ms'
+            transitionDelay: isMobile ? '650ms' : '700ms'
           } as React.CSSProperties}
           >
             {trainingDescription}
@@ -220,7 +218,7 @@ const AboutUsTrainingSection: React.FC = () => {
           {/* Career Promise */}
           <div className={`
             mb-8 transition-all ease-out
-            ${isMobile ? 'duration-700' : 'duration-800'}
+            ${isMobile ? 'duration-350' : 'duration-400'}
             ${isVisible 
               ? 'opacity-100 translate-y-0 scale-100' 
               : getAnimationClasses(
@@ -230,13 +228,13 @@ const AboutUsTrainingSection: React.FC = () => {
             }
           `}
           style={{ 
-            transitionDelay: isMobile ? '1500ms' : '1600ms'
+            transitionDelay: isMobile ? '750ms' : '800ms'
           } as React.CSSProperties}
           >
             <p className={`
               text-gray-700 font-medium text-lg mb-4
               transition-all ease-out
-              ${isMobile ? 'duration-600' : 'duration-700'}
+              ${isMobile ? 'duration-300' : 'duration-350'}
               ${isVisible 
                 ? 'opacity-100 translate-y-0' 
                 : getAnimationClasses(
@@ -246,7 +244,7 @@ const AboutUsTrainingSection: React.FC = () => {
               }
             `}
             style={{ 
-              transitionDelay: isMobile ? '1700ms' : '1800ms'
+              transitionDelay: isMobile ? '850ms' : '900ms'
             } as React.CSSProperties}
             >
               {careerPromise}
@@ -254,7 +252,7 @@ const AboutUsTrainingSection: React.FC = () => {
             <p className="text-gray-600 flex items-center justify-center space-x-2">
               <span className={`
                 transition-all ease-out
-                ${isMobile ? 'duration-600' : 'duration-700'}
+                ${isMobile ? 'duration-300' : 'duration-350'}
                 ${isVisible 
                   ? 'opacity-100 translate-y-0' 
                   : getAnimationClasses(
@@ -264,14 +262,14 @@ const AboutUsTrainingSection: React.FC = () => {
                 }
               `}
               style={{ 
-                transitionDelay: isMobile ? '1900ms' : '2000ms'
+                transitionDelay: isMobile ? '900ms' : '1000ms'
               } as React.CSSProperties}
               >
                 {videoInstruction}
               </span>
               <span className={`
                 text-xl transition-all ease-out
-                ${isMobile ? 'duration-600' : 'duration-700'}
+                ${isMobile ? 'duration-300' : 'duration-350'}
                 ${isVisible 
                   ? 'opacity-100 translate-y-0 animate-bounce' 
                   : getAnimationClasses(
@@ -281,7 +279,7 @@ const AboutUsTrainingSection: React.FC = () => {
                 }
               `}
               style={{ 
-                transitionDelay: isMobile ? '2100ms' : '2200ms'
+                transitionDelay: isMobile ? '800ms' : '800ms'
               } as React.CSSProperties}
               >
                 👇
@@ -293,7 +291,7 @@ const AboutUsTrainingSection: React.FC = () => {
         {/* Video Player */}
         <div className={`
           max-w-4xl mx-auto transition-all ease-out
-          ${isMobile ? 'duration-1000' : 'duration-1200'}
+          ${isMobile ? 'duration-500' : 'duration-600'}
           ${isVisible 
             ? 'opacity-100 translate-y-0 scale-100' 
             : getAnimationClasses(
@@ -303,45 +301,46 @@ const AboutUsTrainingSection: React.FC = () => {
           }
         `}
         style={{ 
-          transitionDelay: isMobile ? '2300ms' : '2400ms'
+          transitionDelay: isMobile ? '1100ms' : '1200ms'
         } as React.CSSProperties}
         >
           <div className={`
             relative bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl border-2 border-blue-200 p-2 md:p-2 shadow-lg
             transition-all ease-out hover:shadow-2xl
             ${isMobile 
-              ? 'duration-500 hover:scale-102' 
-              : 'duration-700 hover:scale-105'
+              ? 'duration-250 hover:scale-102' 
+              : 'duration-350 hover:scale-105'
             }
           `}>
             <div className="relative w-full" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
-              <iframe
-                className={`
-                  absolute top-0 left-0 w-full h-full rounded-xl shadow-lg
-                  transition-all ease-out
-                  ${isMobile ? 'duration-800' : 'duration-1000'}
-                  ${isVisible 
-                    ? 'opacity-100 scale-100' 
-                    : getAnimationClasses(
-                        'opacity-0 scale-95',
-                        'opacity-0 scale-98'
-                      )
-                  }
-                `}
-                src={youtubeEmbedUrl}
-                title={videoTitle}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                style={{ 
-                  transitionDelay: isMobile ? '2500ms' : '2600ms'
-                } as React.CSSProperties}
-              ></iframe>
-            </div>
+  <iframe
+    className={`
+      absolute top-0 left-0 w-full h-full rounded-xl shadow-lg
+      transition-all ease-out
+      ${isMobile ? 'duration-400' : 'duration-500'}
+      ${isVisible 
+        ? 'opacity-100 scale-100' 
+        : getAnimationClasses(
+            'opacity-0 scale-95',
+            'opacity-0 scale-98'
+          )
+      }
+    `}
+     src="https://player.vimeo.com/video/1109831458"
+    title="Vimeo video player"
+    frameBorder="0"
+    allow="autoplay; fullscreen; picture-in-picture"
+    allowFullScreen
+    style={{ 
+      transitionDelay: isMobile ? '1250ms' : '1300ms'
+    } as React.CSSProperties}
+  ></iframe>
+</div>
+
             <p className={`
               text-gray-600 text-sm md:text-base font-medium mt-4 text-center
               transition-all ease-out
-              ${isMobile ? 'duration-600' : 'duration-700'}
+              ${isMobile ? 'duration-300' : 'duration-350'}
               ${isVisible 
                 ? 'opacity-100 translate-y-0' 
                 : getAnimationClasses(
@@ -351,7 +350,7 @@ const AboutUsTrainingSection: React.FC = () => {
               }
             `}
             style={{ 
-              transitionDelay: isMobile ? '2700ms' : '2800ms'
+              transitionDelay: isMobile ? '12000ms' : '1200ms'
             } as React.CSSProperties}
             >
               {videoCaption}

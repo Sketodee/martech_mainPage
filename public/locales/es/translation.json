@@ -76,7 +76,9 @@
   },
   "heroProgram": {
     "headline": {
-      "lineOne": "Gana más. Quémate menos. Tu",
+      "lineOneA": "Alto Poder Adquisitivo",
+"lineOneB": "Seguridad Laboral Duradera",
+"lineOneC": "Equilibrio Vida-Trabajo",
       "lineTwo": "carrera en Marketing Tech comienza aquí."
     },
     "description": "Ingresa a Marketing Operations — uno de los caminos profesionales más gratificantes y pasados por alto en tecnología. En solo 12 semanas, domina herramientas reales como Marketo, HubSpot y Salesforce, construye proyectos listos para el trabajo y lanza una carrera bien remunerada sin el burnout.",

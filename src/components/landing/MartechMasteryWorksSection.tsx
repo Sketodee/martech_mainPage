@@ -116,7 +116,7 @@ const MarTechMasteryWorksSection: React.FC = () => {
 
           <p className={`
             text-gray-600 text-lg transition-all ease-out
-            ${isMobile ? 'duration-800' : 'duration-1000'}
+            ${isMobile ? 'duration-400' : 'duration-500'}
             ${isVisible 
               ? 'opacity-100 translate-y-0 scale-100' 
               : getAnimationClasses(
@@ -137,7 +137,7 @@ const MarTechMasteryWorksSection: React.FC = () => {
         <div className={`
           grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12
           transition-all ease-out
-          ${isMobile ? 'duration-800' : 'duration-1200'}
+          ${isMobile ? 'duration-400' : 'duration-600'}
           ${isVisible 
             ? 'opacity-100 translate-y-0' 
             : getAnimationClasses(
@@ -147,7 +147,7 @@ const MarTechMasteryWorksSection: React.FC = () => {
           }
         `}
         style={{ 
-          transitionDelay: isMobile ? '200ms' : '400ms'
+          transitionDelay: isMobile ? '100ms' : '200ms'
         } as React.CSSProperties}
         >
           {features.map((feature, index) => (
@@ -157,8 +157,8 @@ const MarTechMasteryWorksSection: React.FC = () => {
                 ${feature.bgColor} ${feature.textColor} rounded-2xl p-8 shadow-lg 
                 hover:shadow-2xl transition-all ease-out
                 ${isMobile 
-                  ? 'duration-500 hover:scale-102' 
-                  : 'duration-700 hover:scale-105 hover:-rotate-1'
+                  ? 'duration-250 hover:scale-102' 
+                  : 'duration-350 hover:scale-105 hover:-rotate-1'
                 }
                 ${isVisible 
                   ? 'opacity-100 translate-y-0 scale-100 rotate-0' 
@@ -170,8 +170,8 @@ const MarTechMasteryWorksSection: React.FC = () => {
               `}
               style={{ 
                 transitionDelay: isMobile 
-                  ? `${300 + index * 150}ms`
-                  : `${600 + index * 200}ms`
+                  ? `${300 + index * 50}ms`
+                  : `${600 + index * 100}ms`
               } as React.CSSProperties}
             >
               <div className="space-y-6">
@@ -179,8 +179,8 @@ const MarTechMasteryWorksSection: React.FC = () => {
                 <div className={`
                   ${feature.iconColor} transition-all ease-out
                   ${isMobile 
-                    ? 'duration-500' 
-                    : 'duration-700 hover:scale-110 hover:rotate-12'
+                    ? 'duration-250' 
+                    : 'duration-350 hover:scale-110 hover:rotate-12'
                   }
                   ${isVisible 
                     ? 'opacity-100 translate-y-0 scale-100 rotate-0' 
@@ -192,8 +192,8 @@ const MarTechMasteryWorksSection: React.FC = () => {
                 `}
                 style={{ 
                   transitionDelay: isMobile 
-                    ? `${400 + index * 150}ms`
-                    : `${800 + index * 200}ms`
+                    ? `${400 + index * 50}ms`
+                    : `${800 + index * 100}ms`
                 } as React.CSSProperties}
                 >
                   {feature.icon}
@@ -203,7 +203,7 @@ const MarTechMasteryWorksSection: React.FC = () => {
                 <div className="space-y-4">
                   <h3 className={`
                     text-xl font-bold transition-all ease-out
-                    ${isMobile ? 'duration-500' : 'duration-600'}
+                    ${isMobile ? 'duration-250' : 'duration-300'}
                     ${isVisible 
                       ? 'opacity-100 translate-y-0' 
                       : getAnimationClasses(
@@ -214,15 +214,15 @@ const MarTechMasteryWorksSection: React.FC = () => {
                   `}
                   style={{ 
                     transitionDelay: isMobile 
-                      ? `${500 + index * 150}ms`
-                      : `${1000 + index * 200}ms`
+                      ? `${500 + index * 50}ms`
+                      : `${1000 + index * 100}ms`
                   } as React.CSSProperties}
                   >
                     {feature.title}
                   </h3>
                   <p className={`
                     text-base leading-relaxed transition-all ease-out
-                    ${isMobile ? 'duration-500' : 'duration-600'}
+                    ${isMobile ? 'duration-250' : 'duration-300'}
                     ${isVisible 
                       ? 'opacity-100 translate-y-0' 
                       : getAnimationClasses(
@@ -233,8 +233,8 @@ const MarTechMasteryWorksSection: React.FC = () => {
                   `}
                   style={{ 
                     transitionDelay: isMobile 
-                      ? `${600 + index * 150}ms`
-                      : `${1200 + index * 200}ms`
+                      ? `${600 + index * 50}ms`
+                      : `${1200 + index * 100}ms`
                   } as React.CSSProperties}
                   >
                     {feature.description}
