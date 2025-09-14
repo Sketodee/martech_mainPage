@@ -1,10 +1,11 @@
 import { useTranslation } from 'react-i18next';
-import { FaStar, FaCheck } from 'react-icons/fa';
+import { FaStar} from 'react-icons/fa';
 import { useState, useEffect, useRef } from 'react';
 import user1 from '../../assets/Christie Profile pic.jpeg'
 import user2 from '../../assets/Emily Profile Pic.jpeg'
 import user3 from '../../assets/Maechi Ndeze Picture.jpeg'
 import user4 from '../../assets/Nicholas Hagan.jpeg'
+import FormModal from '../FormModal';
 
 interface VisibleElements {
   description?: boolean;
@@ -22,6 +23,8 @@ const Hero: React.FC = () => {
   const [isAnimating, setIsAnimating] = useState<boolean>(false);
   const heroRef = useRef<HTMLDivElement>(null);
   const elementsRef = useRef<Record<string, HTMLElement | null>>({});
+  const [open, setOpen] = useState(false);
+
 
   // Fallback visibility after 500ms to ensure content is never permanently hidden
   useEffect(() => {
@@ -38,15 +41,13 @@ const Hero: React.FC = () => {
   const headlineLineOneC = t("heroProgram.headline.lineOneC");
   const headlineLineTwo = t("heroProgram.headline.lineTwo");
   const description = t("heroProgram.description");
+  const shortDescription = t("heroProgram.shortDescription");
   const ctaButton = t("heroProgram.cta.button");
 
   const profileAlt = t("heroProgram.profiles.alt");
   const joinText = t("heroProgram.profiles.joinText");
 
-  const salaryPromise = t("heroProgram.salaryPromise.text");
-  const watchVideo = t("heroProgram.video.watchText");
   const videoTitle = t("heroProgram.video.title");
-  const videoCaption = t("heroProgram.video.caption");
 
   const profileImages = [
     user1, user2, user3, user4
@@ -57,35 +58,57 @@ const Hero: React.FC = () => {
     .filter(text => text && text.trim() !== '');
 
   // Rotating headline effect
-  useEffect(() => {
-    // Only start rotation if we have multiple headlines
-    if (headlineVariations.length <= 1) {
-      console.log('Not enough headline variations to rotate');
-      return;
-    }
+  // Rotating headline effect
+useEffect(() => {
+  if (headlineVariations.length <= 1) {
+    console.log("Not enough headline variations to rotate");
+    return;
+  }
 
-    const rotateHeadline = () => {
-      setIsAnimating(true);
+  const interval = setInterval(() => {
+    setIsAnimating(true);
+
+    setTimeout(() => {
+      setCurrentHeadlineIndex((prevIndex) =>
+        (prevIndex + 1) % headlineVariations.length
+      );
+      setIsAnimating(false);
+    }, 300); // small fade-out time before showing next
+  }, 1000); // change headline every 1 second
+
+  // cleanup
+  return () => clearInterval(interval);
+}, [headlineVariations]);
+
+
+  //   // Only start rotation if we have multiple headlines
+  //   if (headlineVariations.length <= 1) {
+  //     console.log('Not enough headline variations to rotate');
+  //     return;
+  //   }
+
+  //   const rotateHeadline = () => {
+  //     setIsAnimating(true);
       
-      setTimeout(() => {
-        setCurrentHeadlineIndex((prevIndex) => 
-          (prevIndex + 1) % headlineVariations.length
-        );
-        setIsAnimating(false);
-      }, 300); // Half of animation duration for smooth transition
-    };
+  //     setTimeout(() => {
+  //       setCurrentHeadlineIndex((prevIndex) => 
+  //         (prevIndex + 1) % headlineVariations.length
+  //       );
+  //       setIsAnimating(false);
+  //     }, 300); // Half of animation duration for smooth transition
+  //   };
 
-    // Start rotation after initial render
-    const initialDelay = setTimeout(() => {
-      const interval = setInterval(rotateHeadline, 3000); // Change every 3 seconds
+  //   // Start rotation after initial render
+  //   const initialDelay = setTimeout(() => {
+  //     const interval = setInterval(rotateHeadline, 1000); // Change every 3 seconds
       
-      return () => clearInterval(interval);
-    }, 2000); // Wait 2 seconds before starting rotation
+  //     return () => clearInterval(interval);
+  //   }, 2000); // Wait 2 seconds before starting rotation
 
-    return () => {
-      clearTimeout(initialDelay);
-    };
-  }, [headlineVariations]);
+  //   return () => {
+  //     clearTimeout(initialDelay);
+  //   };
+  // }, [headlineVariations]);
 
   // // Using Simon Sinek's "Start with Why" - popular business/marketing video
   // const youtubeVideoId = "u4ZoJKF_VuA"; // Simon Sinek: How great leaders inspire action
@@ -164,7 +187,7 @@ const Hero: React.FC = () => {
   
   return (
     <section className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      <div className="w-full lg:w-[80%] mx-auto" ref={heroRef}>
+      <div className="max-w-7xl mx-auto" ref={heroRef}>
 
         {/* Large screens: Side by side layout, Small screens: Stacked */}
         <div className="flex flex-col xl:flex-row xl:items-center lg:gap-12 xl:gap-16">
@@ -174,29 +197,6 @@ const Hero: React.FC = () => {
 
             {/* Main Headline */}
             <div className="mb-8 lg:mb-12">
-              {/* <h1 className="
-            inline-block text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 lg:mb-8
-            bg-gradient-to-r from-black via-[var(--color-blueThree)] to-[var(--color-blueTwo)]
-            bg-clip-text !text-transparent
-            [-webkit-text-fill-color:transparent]
-          ">
-                <span 
-                  className={`
-                    inline-block transition-all duration-600 ease-in-out
-                    ${isAnimating 
-                      ? 'opacity-0 transform translate-y-4' 
-                      : 'opacity-100 transform translate-y-0'
-                    }
-                  `}
-                >
-                  {headlineVariations.length > 0 
-                    ? headlineVariations[currentHeadlineIndex] 
-                    : headlineLineOne || 'Loading...'
-                  }
-                </span>
-                <br /> 
-                {headlineLineTwo}
-              </h1> */}
 
               <h1 className='  inline-block text-4xl md:text-5xl font-bold leading-tight mb-6 lg:mb-8
               '>
@@ -232,21 +232,80 @@ const Hero: React.FC = () => {
               </h1>
 
 
-              <p
-                ref={setElementRef('description')}
-                className={`
-              text-gray-600 text-lg md:text-xl leading-relaxed mb-8 lg:mb-10
-              transition-all duration-600 ease-out
-              ${(visibleElements.description || fallbackVisible)
-                    ? 'opacity-100 translate-y-0 scale-100'
-                    : 'opacity-0 translate-y-8 scale-95'
-                  }
-            `}
-                style={{ transitionDelay: '100ms' } as React.CSSProperties}
-              >
-                {description}
-              </p>
+              {/* Full description: visible only on lg+ */}
+                  <p
+                    ref={setElementRef('description')}
+                    className={`
+                      hidden lg:block   
+                      text-gray-600 text-lg md:text-xl leading-relaxed mb-8 lg:mb-10
+                      transition-all duration-600 ease-out
+                      ${(visibleElements.description || fallbackVisible)
+                        ? 'opacity-100 translate-y-0 scale-100'
+                        : 'opacity-0 translate-y-8 scale-95'
+                      }
+                    `}
+                    style={{ transitionDelay: '100ms' } as React.CSSProperties}
+                  >
+                    {description}
+                  </p>
+
+                  {/* Short description: visible only on xs–md */}
+                  <p
+                    ref={setElementRef('description')}
+                    className={`
+                      block lg:hidden   /* show on xs–md only */
+                      text-gray-600 text-lg md:text-xl leading-relaxed mb-8 lg:mb-10
+                      transition-all duration-600 ease-out
+                      ${(visibleElements.description || fallbackVisible)
+                        ? 'opacity-100 translate-y-0 scale-100'
+                        : 'opacity-0 translate-y-8 scale-95'
+                      }
+                    `}
+                    style={{ transitionDelay: '100ms' } as React.CSSProperties}
+                  >
+                    {shortDescription}
+                  </p>
+
+
             </div>
+
+            {/* Video section on small screen */}
+                <div
+            ref={setElementRef('video')}
+            className={`block lg:hidden   pb-4
+          flex-1 lg:max-w-2xl mt-8 lg:mt-0 transition-all duration-750 ease-out
+          ${(visibleElements.video || fallbackVisible)
+                ? 'opacity-100 translate-y-0 scale-100 rotate-0'
+                : 'opacity-0 translate-y-16 scale-90 rotate-1'
+              }
+        `}
+            style={{ transitionDelay: '400ms' } as React.CSSProperties}
+          >
+            <div className={`
+          relative bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl border-2 border-blue-200 
+          p-2 md:p-3 shadow-lg transition-all duration-350 ease-out
+        `}>
+              <div className="relative w-full" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
+                <iframe
+                  className={`
+                  absolute top-0 left-0 w-full h-full rounded-xl shadow-lg
+                  transition-all duration-600 ease-out
+                  ${(visibleElements.video || fallbackVisible)
+                      ? 'opacity-100 scale-100'
+                      : 'opacity-0 scale-95'
+                    }
+    `}
+                  src="https://player.vimeo.com/video/1109831458"
+                  title={videoTitle}
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                  style={{ transitionDelay: '500ms' } as React.CSSProperties}
+                ></iframe>
+              </div>
+
+
+            </div>
+          </div>
 
             {/* CTA Section with Profiles */}
             <div
@@ -261,7 +320,7 @@ const Hero: React.FC = () => {
           `}
               style={{ transitionDelay: '400ms' } as React.CSSProperties}
             >
-              <button className={`
+              <button onClick={() => setOpen(true)} className={`
             text-white px-8 py-4 bg-gradient-to-b from-[var(--color-blueFour)] to-[var(--color-blueOne)]  
             rounded-full font-semibold transition-all duration-250 ease-out
             hover:from-gray-950 hover:to-[var(--color-blueThree)] hover:scale-110 hover:shadow-2xl
@@ -327,74 +386,13 @@ const Hero: React.FC = () => {
               </div>
             </div>
 
-            {/* Salary Promise */}
-            <div
-              ref={setElementRef('salary')}
-              className={`
-            mb-8 lg:mb-0 transition-all duration-500 ease-out
-            ${(visibleElements.salary || fallbackVisible)
-                  ? 'opacity-100 translate-y-0 scale-100'
-                  : 'opacity-0 translate-y-10 scale-95'
-                }
-          `}
-              style={{ transitionDelay: '300ms' } as React.CSSProperties}
-            >
-              <div className="flex items-center lg:justify-start justify-center space-x-2 mb-4">
-                <span className={`
-              text-gray-700 font-medium transition-all duration-350 ease-out
-              ${(visibleElements.salary || fallbackVisible)
-                    ? 'opacity-100 translate-x-0'
-                    : 'opacity-0 -translate-x-4'
-                  }
-            `}
-                  style={{ transitionDelay: '400ms' } as React.CSSProperties}
-                >
-                  {salaryPromise}
-                </span>
-                <FaCheck className={`
-              w-5 h-5 text-green-500 transition-all duration-300 ease-out
-              hover:scale-125 hover:rotate-360
-              ${(visibleElements.salary || fallbackVisible)
-                    ? 'opacity-100 scale-100 rotate-0'
-                    : 'opacity-0 scale-0 rotate-180'
-                  }
-            `}
-                  style={{ transitionDelay: '1000ms' } as React.CSSProperties}
-                />
-              </div>
-
-              {/* Watch Video Text - Hide on large screens since video is beside */}
-              <p className="text-gray-600 flex items-center lg:justify-start justify-center space-x-2 lg:hidden">
-                <span className={`
-              transition-all duration-350 ease-out
-              ${(visibleElements.salary || fallbackVisible)
-                    ? 'opacity-100 translate-y-0'
-                    : 'opacity-0 translate-y-3'
-                  }
-            `}
-                  style={{ transitionDelay: '1200ms' } as React.CSSProperties}
-                >
-                  {watchVideo}
-                </span>
-                <span className={`
-              text-xl transition-all duration-350 ease-out
-              ${(visibleElements.salary || fallbackVisible)
-                    ? 'opacity-100 translate-y-0 animate-bounce'
-                    : 'opacity-0 translate-y-4'
-                  }
-            `}
-                  style={{ transitionDelay: '700ms' } as React.CSSProperties}
-                >
-                  👇
-                </span>
-              </p>
-            </div>
+            
           </div>
 
           {/* Video Column */}
           <div
             ref={setElementRef('video')}
-            className={`
+            className={`hidden lg:block   
           flex-1 lg:max-w-2xl mt-8 lg:mt-0 transition-all duration-750 ease-out
           ${(visibleElements.video || fallbackVisible)
                 ? 'opacity-100 translate-y-0 scale-100 rotate-0'
@@ -426,23 +424,12 @@ const Hero: React.FC = () => {
               </div>
 
 
-              <p className={`
-            text-gray-600 text-sm md:text-base font-medium mt-4 text-center
-            transition-all duration-400 ease-out
-            ${(visibleElements.video || fallbackVisible)
-                  ? 'opacity-100 translate-y-0 scale-100'
-                  : 'opacity-0 translate-y-6 scale-95'
-                }
-          `}
-                style={{ transitionDelay: '600ms' } as React.CSSProperties}
-              >
-                {videoCaption}
-              </p>
             </div>
           </div>
 
         </div>
       </div>
+        <FormModal open={open} onClose={() => setOpen(false)} />
     </section>
   );
 };

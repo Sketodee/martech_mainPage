@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { FaGraduationCap, FaGlobe, FaDollarSign, FaHandshake } from 'react-icons/fa';
+import FormModal from '../FormModal';
+import { useState } from 'react';
 
 const ImpactSection = () => {
   const { t } = useTranslation();
@@ -14,6 +16,8 @@ const ImpactSection = () => {
   const nextStoryTitle = t("impactSection.nextStory.title");
   const nextStoryDescription = t("impactSection.nextStory.description");
   const applyButtonText = t("impactSection.nextStory.applyButtonText");
+  const [open, setOpen] = useState(false);
+
 
   return (
     <div className="bg-gray-50 pb-16 px-6">
@@ -77,12 +81,14 @@ const ImpactSection = () => {
           <p className="text-gray-600 mb-8 text-lg">
             {nextStoryDescription}
           </p>
-          <button className="text-white sm:w-auto px-8 py-4 bg-gradient-to-b from-[var(--color-blueFour)] to-[var(--color-blueOne)]  rounded-full font-semibold hover:from-gray-950 hover:to-[var(--color-blueThree)] transition-all duration-100 transform hover:scale-105">
+          <button onClick={() => setOpen(true)} className="text-white sm:w-auto px-8 py-4 bg-gradient-to-b from-[var(--color-blueFour)] to-[var(--color-blueOne)]  rounded-full font-semibold hover:from-gray-950 hover:to-[var(--color-blueThree)] transition-all duration-100 transform hover:scale-105">
                 {applyButtonText}
               </button>
 
         </div>
       </div>
+
+        <FormModal open={open} onClose={() => setOpen(false)} />
     </div>
   );
 };

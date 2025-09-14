@@ -1,11 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import FormModal from '../FormModal';
 
 const ExpertsMissionStorySection: React.FC = () => {
   const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const sectionRef = useRef<HTMLElement>(null);
+  const [open, setOpen] = useState(false);
 
   // Check if device is mobile
   useEffect(() => {
@@ -103,7 +105,7 @@ const ExpertsMissionStorySection: React.FC = () => {
             {expertsDescription}
           </p>
           
-         <button className={`
+         <button onClick={() => setOpen(true)} className={`
            text-white sm:w-auto px-8 py-4 bg-gradient-to-b from-[var(--color-blueFour)] to-[var(--color-blueOne)]  
            rounded-full font-semibold transition-all ease-out transform
            hover:from-gray-950 hover:to-[var(--color-blueThree)] hover:shadow-2xl
@@ -256,6 +258,7 @@ const ExpertsMissionStorySection: React.FC = () => {
           </div>
         </div>
       </div>
+        <FormModal open={open} onClose={() => setOpen(false)} />
     </section>
   );
 };

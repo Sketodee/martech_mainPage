@@ -6,6 +6,11 @@ import {
   FiTarget, 
   FiRepeat 
 } from 'react-icons/fi';
+import Bukola from '../../assets/Bukola Odunaiya - Headshot.jpeg.jpg';
+import Ola from '../../assets/Ola Daranijo New Headshot.jpeg.jpg'
+import Carol from '../../assets/Carol Apaestagui Profile.jpeg.jpg'
+import Deji from '../../assets//Deji Sangowawa.png'
+
 
 const MeetTheTeam: React.FC = () => {
   const { t } = useTranslation();
@@ -105,24 +110,24 @@ const MeetTheTeam: React.FC = () => {
   // Team members with translations
   const teamMembers = [
     {
-      name: t("meetTheTeamSection.teamMembers.sarahChen.name"),
+      name: "Ola Daranijo",
       role: t("meetTheTeamSection.teamMembers.sarahChen.role"),
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b789?w=400&h=500&fit=crop&crop=face"
+      image: Ola
     },
     {
-      name: t("meetTheTeamSection.teamMembers.mikeTorres.name"), 
+      name: "Bukola Odunaiya", 
       role: t("meetTheTeamSection.teamMembers.mikeTorres.role"),
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face"
+      image: Bukola
     },
     {
-      name: t("meetTheTeamSection.teamMembers.malikBanjo.name"),
+      name: "Carol Apaestagui",
       role: t("meetTheTeamSection.teamMembers.malikBanjo.role"), 
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=500&fit=crop&crop=face"
+      image: Carol
     },
     {
-      name: t("meetTheTeamSection.teamMembers.jennaKim.name"),
+      name: "Deji Sangowawa",
       role: t("meetTheTeamSection.teamMembers.jennaKim.role"),
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=500&fit=crop&crop=face"
+      image: Deji
     }
   ];
 

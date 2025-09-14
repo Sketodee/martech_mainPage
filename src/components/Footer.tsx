@@ -16,8 +16,8 @@ const Footer = () => {
   const [, setLanguage] = useState(i18next.language);
 
   // Extract all translatable content
-  const companyDescription = t("footer.company.description");
-  const moreAboutUs = t("footer.company.moreAboutUs");
+  // const companyDescription = t("footer.company.description");
+  // const moreAboutUs = t("footer.company.moreAboutUs");
 
   // Navigation links
     const navAbout = t("footer.navigation.about");
@@ -92,15 +92,15 @@ const Footer = () => {
             </div>
 
             {/* Description */}
-            <p className="text-purple-100 leading-relaxed max-w-sm">
+            {/* <p className="text-purple-100 leading-relaxed max-w-sm">
               {companyDescription}
-            </p>
+            </p> */}
 
             {/* More About Us Link */}
-            <button className="flex items-center space-x-2 text-purple-200 hover:text-white transition-colors duration-200 group">
+            {/* <button className="flex items-center space-x-2 text-purple-200 hover:text-white transition-colors duration-200 group">
               <span className="text-sm">{moreAboutUs}</span>
               <div className="w-2 h-2 bg-purple-300 rounded-full"></div>
-            </button>
+            </button> */}
 
             {/* Social Icons - 2x2 Grid */}
             <div className="grid grid-cols-2 gap-3 w-fit">

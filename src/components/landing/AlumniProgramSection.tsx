@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { FaUser, FaChartBar, FaRocket } from 'react-icons/fa';
 import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const AlumniProgramSections: React.FC = () => {
   const { t } = useTranslation();
@@ -223,7 +224,7 @@ const AlumniProgramSections: React.FC = () => {
           </div>
 
           {/* View More Button */}
-          <button className={`
+          <Link to={'/testimonial'}  className={`
             text-white sm:w-auto px-8 py-4 bg-gradient-to-b from-[var(--color-blueFour)] to-[var(--color-blueOne)]
             rounded-full font-semibold transition-all ease-out
             hover:from-gray-950 hover:to-[var(--color-blueThree)] hover:shadow-2xl
@@ -245,7 +246,7 @@ const AlumniProgramSections: React.FC = () => {
             } as React.CSSProperties}
           >
             {viewMoreButton}
-          </button>
+          </Link>
         </div>
 
         {/* Who This Program Is For */}

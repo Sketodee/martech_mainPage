@@ -5,6 +5,7 @@ import { BiChevronDown, BiGlobe } from "react-icons/bi";
 import { Link } from 'react-router-dom';
 import i18next from "i18next";
 import martechLoogo from '../assets/martechLogo.png'
+import FormModal from './FormModal';
 
 type languageOption = { language: string; code: string };
 
@@ -25,12 +26,18 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [language, setLanguage] = useState(i18next.language);
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
+   const [open, setOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     // Close language dropdown when main menu is toggled
     setIsLanguageDropdownOpen(false);
   };
+
+  const showFormMobile = () => {
+    toggleMenu(); 
+    setOpen(true);
+  }
 
   const handleLanguageChange = (selectedCode: string) => {
     setLanguage(selectedCode);
@@ -179,7 +186,7 @@ const Navbar = () => {
     <nav className="z-50 md:py-3 ">
       <div className="w-full lg:w-[80%] xl:w-[70%] mx-auto flex items-center justify-between bg-white  text-black border-1 border-gray-200  p-2 md:p-4 rounded-full shadow-lg shadow-gray-300">
         {/* Logo */}
-        <Link to={'/'} className="flex items-center space-x-2">
+        <Link onClick={() => setIsMenuOpen(false)} to={'/'} className="flex items-center space-x-2">
           <img className='h-10' src={martechLoogo} alt={'logo'} />
         </Link>
 
@@ -193,12 +200,11 @@ const Navbar = () => {
 
         <div className='hidden md:flex items-center space-x-2'>
           <div className="p-[2px] rounded-full bg-gradient-to-r from-purple-500 via-blue-900 to-blue-500 animate-gradient-x">
-            <Link
-              to="/contact"
+            <button  onClick={() => setOpen(true)}
               className="block rounded-full px-6 py-2 bg-white text-gray-800 hover:text-blue-400 transition-colors duration-200"
             >
               {navCta}
-            </Link>
+            </button>
           </div>
 
 
@@ -223,10 +229,12 @@ const Navbar = () => {
           <Link onClick={toggleMenu} to="/about" className="block py-2 hover:text-blue-400 transition-colors duration-200">{navAbout}</Link>
           <Link onClick={toggleMenu} to="/program" className="block py-2 hover:text-blue-400 transition-colors duration-200">{navPrograms}</Link>
           <Link onClick={toggleMenu} to="/testimonial" className="block py-2 hover:text-blue-400 transition-colors duration-200">{navTestimonials}</Link>
-          <Link onClick={toggleMenu} to="/contact" className="block py-2 hover:text-blue-400 transition-colors duration-200">{navCta}</Link>
+          <button onClick={showFormMobile}  className="block py-2 hover:text-blue-400 transition-colors duration-200">{navCta} </button>
           <MobileLanguageSelector />
         </div>
       </div>
+
+       <FormModal open={open} onClose={() => setOpen(false)} />
     </nav>
     // </div>
   )

@@ -3,7 +3,7 @@
     "navigation": {
       "about": "About Us",
       "program": "Program",
-      "testimonial": "Testimonial",
+      "testimonial": "Testimonials",
       "navCta": "Join the program"
     }
   },
@@ -16,7 +16,7 @@
     "navigation": {
       "about": "About Us",
       "program": "Program",
-      "testimonial": "Testimonial"
+      "testimonial": "Testimonials"
     },
     "contact": {
       "heading": "Contact Us",
@@ -82,6 +82,7 @@
       "lineTwo": "Your Marketing Tech Career Starts Here."
     },
     "description": "Break into Marketing Operations — one of tech's most rewarding and overlooked career paths. In just 12 weeks, master real tools like Marketo, HubSpot, and Salesforce, build job-ready projects, and launch a high-paying career without the burnout.",
+    "shortDescription": "Break into Marketing Operations — one of tech's most rewarding and overlooked career paths.",
     "cta": {
       "button": "Join Our Next Cohort"
     },

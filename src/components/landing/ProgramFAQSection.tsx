@@ -10,7 +10,7 @@ const ProgramFAQSection = () => {
   const headerTitle = t("programFAQSection.header.title");
   const contentTitle = t("programFAQSection.content.title");
   const contentDescription = t("programFAQSection.content.description");
-  const viewAllButton = t("programFAQSection.content.viewAllButton");
+  // const viewAllButton = t("programFAQSection.content.viewAllButton");
 
   // FAQs with translations
   const faqs = [
@@ -87,9 +87,9 @@ const ProgramFAQSection = () => {
               </p>
             </div>
             
-          <button className="text-white sm:w-auto px-8 py-4 bg-gradient-to-b from-[var(--color-blueFour)] to-[var(--color-blueOne)]  rounded-full font-semibold hover:from-gray-950 hover:to-[var(--color-blueThree)] transition-all duration-100 transform hover:scale-105">
+          {/* <button className="text-white sm:w-auto px-8 py-4 bg-gradient-to-b from-[var(--color-blueFour)] to-[var(--color-blueOne)]  rounded-full font-semibold hover:from-gray-950 hover:to-[var(--color-blueThree)] transition-all duration-100 transform hover:scale-105">
                 {viewAllButton}
-              </button>
+              </button> */}
           </div>
 
           {/* Right Column - FAQ Items */}
