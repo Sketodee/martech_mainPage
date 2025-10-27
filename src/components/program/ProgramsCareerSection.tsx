@@ -13,8 +13,8 @@ const ProgramsCareerSection = () => {
   const careerDescription = t("programsCareerSection.career.description");
   const careerPromise = t("programsCareerSection.career.careerPromise");
   const videoInstruction = t("programsCareerSection.career.videoInstruction");
-  const videoTitle = t("programsCareerSection.career.videoTitle");
-  const videoCaption = t("programsCareerSection.career.videoCaption");
+  // const videoTitle = t("programsCareerSection.career.videoTitle");
+  // const videoCaption = t("programsCareerSection.career.videoCaption");
 
   return (
     <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
@@ -86,25 +86,7 @@ const ProgramsCareerSection = () => {
           </div>
         </div>
 
-        {/* Video Player */}
-        <div className="max-w-4xl mx-auto">
-          <div className="relative bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl border-2 border-blue-200 p-2 md:p-2 shadow-lg">
-           <div className="relative w-full" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
-  <iframe
-    className="absolute top-0 left-0 w-full h-full rounded-xl shadow-lg"
-     src="https://player.vimeo.com/video/1109831458"
-    title={videoTitle}
-    frameBorder="0"
-    allow="autoplay; fullscreen; picture-in-picture"
-    allowFullScreen
-  ></iframe>
-</div>
 
-            <p className="text-gray-600 text-sm md:text-base font-medium mt-4 text-center">
-              {videoCaption}
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );

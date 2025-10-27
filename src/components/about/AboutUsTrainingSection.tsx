@@ -253,58 +253,6 @@ const AboutUsTrainingSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Video Player */}
-        <div className={`
-          max-w-4xl mx-auto transition-all ease-out
-          ${isMobile ? 'duration-500' : 'duration-600'}
-          ${isVisible
-            ? 'opacity-100 translate-y-0 scale-100'
-            : getAnimationClasses(
-              'opacity-0 translate-y-12 scale-95',
-              'opacity-0 translate-y-6 scale-98'
-            )
-          }
-        `}
-          style={{
-            transitionDelay: isMobile ? '1100ms' : '1200ms'
-          } as React.CSSProperties}
-        >
-          <div className={`
-            relative bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl border-2 border-blue-200 p-2 md:p-2 shadow-lg
-            transition-all ease-out hover:shadow-2xl
-            ${isMobile
-              ? 'duration-250 hover:scale-102'
-              : 'duration-350 hover:scale-105'
-            }
-          `}>
-            <div className="relative w-full" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
-              <iframe
-                className={`
-                absolute top-0 left-0 w-full h-full rounded-xl shadow-lg
-                transition-all ease-out
-                ${isMobile ? 'duration-400' : 'duration-500'}
-                ${isVisible
-                    ? 'opacity-100 scale-100'
-                    : getAnimationClasses(
-                      'opacity-0 scale-95',
-                      'opacity-0 scale-98'
-                    )
-                  }
-    `}
-                src="https://player.vimeo.com/video/1109831458"
-                title="Vimeo video player"
-                frameBorder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowFullScreen
-                style={{
-                  transitionDelay: isMobile ? '1250ms' : '1300ms'
-                } as React.CSSProperties}
-              ></iframe>
-            </div>
-
-
-          </div>
-        </div>
       </div>
     </section>
   );
